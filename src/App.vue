@@ -19,7 +19,7 @@ import FooterComponent from './components/FooterComponent.vue'
 </template>
 
 <style scoped>
-main>.container {
+main > .container {
   padding-top: min(5vw + 60px, 120px);
   padding-bottom: max(5vw + 5px, 10px);
 }
