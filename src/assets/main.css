@@ -1,5 +1,12 @@
+:root {
+  --linkedin-color: #0a66c2;
+  --facebook-color: #0866ff;
+  --github-color: #1f2328;
+  --primary-color: #5477fb;
+}
+
 .name {
-  color: #5477fb;
+  color: var(--primary-color);
 }
 
 #app {
