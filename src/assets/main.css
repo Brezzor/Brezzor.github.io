@@ -3,18 +3,35 @@
   --facebook-color: #0866ff;
   --github-color: #1f2328;
   --primary-color: #5477fb;
+  --body-font-family: 'Roboto', sans-serif;
+  --body-font-size: 500;
+  --body-font-style: normal;
+  --bg-image-url: url('./doted-paper.webp');
+  --bg-image-repeat: no-repeat;
+  --bg-image-size: auto;
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+html, body, #app {
+  height: 100% !important;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-style: var(--body-font-style);
+  background-image: var(--bg-image-url);
+  background-repeat: var(--bg-image-repeat);
+  background-size: var(--bg-image-size);
 }
 
 .name {
   color: var(--primary-color);
-}
-
-#app {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-style: normal;
 }
 
 .roboto-thin {

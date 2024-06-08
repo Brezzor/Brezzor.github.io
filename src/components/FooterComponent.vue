@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
+  <footer class="footer mt-auto py-3 bg-body-tertiary shadow-top fixed-bottom">
   <div class="container">
     <div class="d-flex justify-content-between">
       <span class="text-body-secondary">© 2024 Oliver Bresson. All rights reserved.</span>
@@ -21,4 +22,11 @@
       </div>
     </div>
   </div>
+</footer>
 </template>
+
+<style scoped>
+.shadow-top {
+  box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.15) !important;
+}
+</style>
