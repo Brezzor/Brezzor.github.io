@@ -72,7 +72,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h2 class="text-center">Mine mål</h2>
-                    <p class="px-3">Mine mål...?</p>
+                    <p class="px-3">Mine mål er at udvide min viden inde for programmering og systemudvikling. Samt at få erfaring med at bruge det jeg har lært fra min tid på Datamatiker uddannelsen, på Zealand Roskilde</p>
                   </div>
                 </div>
               </div>
