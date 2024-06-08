@@ -8,10 +8,8 @@ import FooterComponent from './components/FooterComponent.vue'
   <header>
     <HeaderComponent />
   </header>
-  <main class="flex-shrink-0 main-background">
-    <div class="container">
+  <main class="main-background">
       <RouterView />
-    </div>
   </main>
   <footer class="footer mt-auto py-3 bg-body-tertiary shadow-top">
     <FooterComponent />
@@ -19,13 +17,14 @@ import FooterComponent from './components/FooterComponent.vue'
 </template>
 
 <style scoped>
-main > .container {
+main {
   padding-top: min(5vw + 60px, 120px);
   padding-bottom: max(5vw + 5px, 10px);
+  padding-inline: min(5vw + 5px, 30px);
 }
 
 .main-background {
-  background-image: url('./assets/doted-paper.png');
+  background-image: url('./assets/doted-paper.webp');
   background-color: white;
   background-repeat: no-repeat;
   background-size: cover;

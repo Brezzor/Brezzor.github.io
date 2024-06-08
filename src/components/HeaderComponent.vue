@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router'
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow">
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">
-        <img class="me-2 logo" src="@/assets/logo.png" alt="Logo" width="35" height="35" />
+        <img class="me-2 logo" src="@/assets/logo.webp" alt="Logo" width="35" height="35" />
         <span class="align-middle">Oliver - Portfolio</span>
       </RouterLink>
       <button
@@ -27,7 +27,7 @@ import { RouterLink } from 'vue-router'
       >
         <div class="offcanvas-header">
           <RouterLink class="offcanvas-title navbar-brand" id="offcanvasNavbarLabel" to="/">
-            <img class="me-2 logo" src="@/assets/logo.png" alt="Logo" width="35" height="35" />
+            <img class="me-2 logo" src="@/assets/logo.webp" alt="Logo" width="35" height="35" />
             <span class="align-middle">Oliver - Portfolio</span>
           </RouterLink>
           <button

@@ -10,40 +10,40 @@
             <div class="card">
               <div class="card-body">
                 <p>
-                  Mit navn er <span class="name">Oliver Bresson</span>, jeg er 26 år gammel og har
-                  en stor passion for Programmering og Teknologi.
+                  Mit navn er <span class="name">Oliver Bresson</span>, jeg er 26 år gammel og bor i Roskilde. Jeg har
+                  en stor interesse for programmering og teknologi. Jeg er tidligere uddannet EUX Elektriker, med speciale ind for CTS (Central Tilstandskontrol og Styring). 
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-5 col-md-12">
             <div class="card">
               <div class="card-body">
                 <h2 class="text-center">Interesser</h2>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                     Familie
-                    <span class="bi bi-house-heart-fill"></span>
+                    <i class="bi bi-house-heart-fill fs-4"></i>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                     Venner
-                    <span class="bi bi-people-fill"></span>
+                    <i class="bi bi-people-fill fs-4"></i>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                     Gaming
-                    <span class="bi bi-dpad-fill"></span>
+                    <i class="bi bi-dpad-fill fs-4"></i>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                     Computer
-                    <span class="bi bi-pc-display"></span>
+                    <i class="bi bi-pc-display fs-4"></i>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                     Programmering
-                    <span class="bi bi-terminal-fill"></span>
+                    <i class="bi bi-terminal-fill fs-4"></i>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                     Teknologi
-                    <span class="bi bi-cpu-fill"></span>
+                    <i class="bi bi-cpu-fill fs-4"></i>
                   </li>
                 </ul>
               </div>
@@ -83,3 +83,9 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.list-group-item:hover {
+  color: var(--primary-color);
+}
+</style>

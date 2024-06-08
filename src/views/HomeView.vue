@@ -7,15 +7,13 @@ import { RouterLink } from 'vue-router'
     <div class="card-body">
       <div class="d-flex flex-wrap gap-4">
         <div class="m-auto">
-          <h1 class="display-1 fw-bold">Hej,</h1>
-          <h1 class="display-1 fw-bold">jeg er <span class="name">Oliver</span></h1>
-          <h1 class="display-1 fw-bold">Datamatiker</h1>
+          <h1 class="display-1 fw-bold">Hej,<br>jeg er <span class="name">Oliver</span><br>Datamatiker</h1>
           <div class="d-flex justify-content-center pt-4">
             <RouterLink class="btn btn-primary" to="/contact">Kontakt</RouterLink>
           </div>
         </div>
         <div class="m-auto">
-          <img src="/src/assets/my-image.png" alt="headshot" class="image" />
+          <img src="/src/assets/my-image.webp" alt="headshot" class="image" />
         </div>
       </div>
     </div>
