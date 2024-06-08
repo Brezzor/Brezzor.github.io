@@ -20,7 +20,7 @@ export default {
 <template>
   <header class="navbar navbar-expand-lg bg-light sticky-top shadow">
     <nav class="container-fluid">
-      <RouterLink class="navbar-brand" to="/">
+      <RouterLink class="navbar-brand" to="/" v-on:click="toggleNavbar">
         <img class="me-2 logo" src="@/assets/logo.webp" alt="Logo" width="35" height="35" />
         <span class="align-middle">Oliver - Portfolio</span>
       </RouterLink>
