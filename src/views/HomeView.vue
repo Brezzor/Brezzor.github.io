@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
 </script>
 
 <template>
@@ -9,12 +10,13 @@ import { RouterLink } from 'vue-router'
         <div class="col-lg-6 col-md-12">
           <div class="row">
             <div class="col-12">
-              <div class="d-flex justify-content-center">
-                <h1 class="display-1 fw-bold">Hej,<br>jeg er <span class="name">Oliver</span><br>Datamatiker</h1>              
+              <div class="d-flex flex-column justify-content-center">
+                <h1 class="display-3 fw-bold">Velkommen,<br>mit navn er Oliver<br>Datamatiker</h1>
+                <TypewriterTextComponent />
               </div>
             </div>
             <div class="col-12">
-              <div class="text-center">
+              <div class="text-center pt-4">
                 <RouterLink class="btn btn-primary" to="/contact">Kontakt</RouterLink>
               </div>
             </div>
