@@ -13,7 +13,6 @@ export default {
       charIndex: 0,
     };
   },
-  props: {},
   created() {
     setTimeout(this.typeText, this.newTextDelay + 200);
   },
