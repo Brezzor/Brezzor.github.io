@@ -54,7 +54,7 @@ export default {
 <template>
   <div class="container p-0">
     <span class="display-3 typed-text">{{ typeValue }}</span>
-    <span class="blinking-cursor">|</span>
+    <span class="display-3 blinking-cursor">|</span>
     <span class="cursor" :class="{ typing: typeStatus}">&nbsp;</span>
   </div>
 </template>
@@ -62,7 +62,6 @@ export default {
 <style lang="scss" scoped>
 // Cursor blinking CSS Starts...
 .blinking-cursor {
-  font-size: 6rem;
   color: #2c3e50;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
