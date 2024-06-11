@@ -3,7 +3,7 @@
 <template>
   <div class="card">
     <div class="card-body">
-      <h1 class="text-center">Hvem er jeg?</h1>
+      <h1 class="text-center">Hvem er jeg</h1>
       <div class="container pt-2">
         <div class="row gap-4">
           <div class="col-12">

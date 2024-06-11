@@ -14,6 +14,6 @@ import FooterComponent from './components/FooterComponent.vue'
 
 <style scoped>
 .container {
-  margin-bottom: calc(49px + 1.5rem);
+  margin-bottom: calc(10vw + 70px);
 }
 </style>
