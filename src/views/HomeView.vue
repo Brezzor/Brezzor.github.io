@@ -34,8 +34,10 @@ import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
 
 <style scoped>
 .image {
-  max-width: 50%;
-  height: auto;
+  max-width: 90%;
+  width: 75%;
   filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 </style>

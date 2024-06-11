@@ -5,38 +5,127 @@
     <div class="card-body">
       <div class="container text-center">
         <h1>Kontakt mig</h1>
-        <div class="row">
-          <div class="col-md-12 col-lg-6">
-            <i class="bi bi-envelope-at-fill fs-1"></i>
-            <p class="fw-bold">Mail: <a href="mailto:oliver.bresson@gmail.com">oliver.bresson@gmail.com</a></p>            
+        <div class="row g-4">
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <img class="image" src="../assets/my-image.webp" alt="">
+            </div>
           </div>
-          <div class="col-md-12 col-lg-6">
-            <i class="bi bi-phone-fill fs-1"></i>
-            <p class="fw-bold">Mobil: <a href="tel:22265056">+45 22 26 50 56</a></p>            
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="row g-4">
+              <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="row g-0">
+                  <div class="col-5">
+                    <i class="bi bi-envelope-at-fill fs-4"></i>                
+                  </div>
+                  <div class="col-2">
+                    <div class="vr align-self-center" style="height: 2em;"></div>                
+                  </div>
+                  <div class="col-5 align-content-center">
+                    <span class="fw-bold">Mail</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">                
+                <div class="row">
+                  <div class="col pt-2">
+                    <a class="link-dark" href="mailto:oliver.bresson@gmail.com">oliver.bresson@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <h2 class="pt-4">Links</h2>
-        <div class="row gap-md-0 gap-sm-4">
-          <div class="col-md-4 col-sm-12">
-            <a class="icon-link" href="" target="_blank">
-              <i class="bi-linkedin fs-2" style="color: var(--linkedin-color)"></i>
-              Linkedin
-            </a>
+
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="row g-0">
+                  <div class="col-5">
+                    <i class="bi bi-phone-fill fs-4"></i>
+                  </div>
+                  <div class="col-2">
+                    <div class="vr" style="height: 2em;"></div>
+                  </div>
+                  <div class="col-5 align-content-center">
+                    <span class="fw-bold">Mobil</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">                
+                <div class="row">
+                  <div class="col pt-2">
+                    <a class="link-dark" href="tel:22265056">+45 22 26 50 56</a>
+                  </div>
+                </div>
+              </div>
+            </div>                        
           </div>
-          <div class="col-md-4 col-sm-12">
-            <a class="icon-link" href="icon-link" target="_blank">
-              <i class="bi-facebook fs-2" style="color: var(--facebook-color)"></i>
-              Facebook
-            </a>
+
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="row g-0">
+                  <div class="col-5">
+                    <i class="bi bi-linkedin fs-4" style="color: var(--linkedin-color)"></i>
+                  </div>
+                  <div class="col-2">
+                    <div class="vr" style="height: 2em;"></div>
+                  </div>
+                  <div class="col-5 align-content-center">
+                    <span class="fw-bold">Linkedin</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">                
+                <div class="row">
+                  <div class="col pt-2">
+                    <a class="link-dark" href="https://www.linkedin.com/in/oliver-bresson-277788138/" target="_blank">Linkedin</a>
+                  </div>
+                </div>
+              </div>
+            </div>            
           </div>
-          <div class="col-md-4 col-sm-12">
-            <a class="icon-link" href="" target="_blank" rel="noopener noreferrer">
-              <i class="bi-github fs-2" style="color: var(--github-color)"></i>
-              Github
-            </a>
+
+          <div class="col-sm-12 col-md-6">
+            <div class="card card-dark">
+              <div class="card-header">
+                <div class="row g-0">
+                  <div class="col-5">
+                    <i class="bi bi-facebook fs-4" style="color: var(--facebook-color)"></i>
+                  </div>
+                  <div class="col-2">
+                    <div class="vr" style="height: 2em;"></div>
+                  </div>
+                  <div class="col-5 align-content-center">
+                    <span class="fw-bold">Facebook</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">                
+                <div class="row">
+                  <div class="col pt-2">
+                    <a class="link-dark" href="https://www.linkedin.com/in/oliver-bresson-277788138/" target="_blank">Facebook</a>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.image {
+  width: 75%;
+  max-width: 90%;
+  filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
+}
+</style>
