@@ -1,61 +1,64 @@
 <script lang="ts">
 export default {
-  name: "typeWriter",
+  name: 'typeWriter',
   data: () => {
     return {
-      typeValue: "",
+      typeValue: '',
       typeStatus: false,
-      displayTextArray: ["Jeg er Datamatiker.","Jeg kan kode Frontend.","Jeg kan kode Backend.","Jeg kan arbejde med Databaser."],
+      displayTextArray: [
+        'Jeg er Datamatiker.',
+        'Jeg kan kode Frontend.',
+        'Jeg kan kode Backend.',
+        'Jeg kan arbejde med Databaser.'
+      ],
       typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,
       displayTextArrayIndex: 0,
-      charIndex: 0,
-    };
+      charIndex: 0
+    }
   },
   created() {
-    setTimeout(this.typeText, this.newTextDelay + 200);
+    setTimeout(this.typeText, this.newTextDelay + 200)
   },
   methods: {
     typeText() {
       if (this.charIndex < this.displayTextArray[this.displayTextArrayIndex].length) {
-        if (!this.typeStatus) this.typeStatus = true;
-        this.typeValue += this.displayTextArray[this.displayTextArrayIndex].charAt(
-          this.charIndex
-        );
-        this.charIndex += 1;
-        setTimeout(this.typeText, this.typingSpeed);
+        if (!this.typeStatus) this.typeStatus = true
+        this.typeValue += this.displayTextArray[this.displayTextArrayIndex].charAt(this.charIndex)
+        this.charIndex += 1
+        setTimeout(this.typeText, this.typingSpeed)
       } else {
-        this.typeStatus = false;
-        setTimeout(this.eraseText, this.newTextDelay);
+        this.typeStatus = false
+        setTimeout(this.eraseText, this.newTextDelay)
       }
     },
     eraseText() {
       if (this.charIndex > 0) {
-        if (!this.typeStatus) this.typeStatus = true;
+        if (!this.typeStatus) this.typeStatus = true
         this.typeValue = this.displayTextArray[this.displayTextArrayIndex].substring(
           0,
           this.charIndex - 1
-        );
-        this.charIndex -= 1;
-        setTimeout(this.eraseText, this.erasingSpeed);
+        )
+        this.charIndex -= 1
+        setTimeout(this.eraseText, this.erasingSpeed)
       } else {
-        this.typeStatus = false;
-        this.displayTextArrayIndex += 1;
+        this.typeStatus = false
+        this.displayTextArrayIndex += 1
         if (this.displayTextArrayIndex >= this.displayTextArray.length)
-          this.displayTextArrayIndex = 0;
-        setTimeout(this.typeText, this.typingSpeed + 1000);
+          this.displayTextArrayIndex = 0
+        setTimeout(this.typeText, this.typingSpeed + 1000)
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <template>
   <h1 class="display-5">
     <span class="typed-text">{{ typeValue }}</span>
     <span class="blinking-cursor">|</span>
-    <span class="cursor" :class="{ typing: typeStatus}">&nbsp;</span>
+    <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
   </h1>
 </template>
 

@@ -10,8 +10,10 @@
             <div class="card">
               <div class="card-body">
                 <p>
-                  Mit navn er <span class="name">Oliver Bresson</span>, jeg er 26 år gammel og bor i Roskilde. Jeg har
-                  en stor interesse for programmering og teknologi. Jeg er tidligere uddannet EUX Elektriker, med speciale ind for CTS (Central Tilstandskontrol og Styring). 
+                  Mit navn er <span class="name">Oliver Bresson</span>, jeg er 26 år gammel og bor i
+                  Roskilde. Jeg har en stor interesse for programmering og teknologi. Jeg er
+                  tidligere uddannet EUX Elektriker, med speciale ind for CTS (Central
+                  Tilstandskontrol og Styring).
                 </p>
               </div>
             </div>
@@ -72,7 +74,11 @@
                 <div class="card">
                   <div class="card-body">
                     <h2 class="text-center">Mine mål</h2>
-                    <p class="px-3">Mine mål er at udvide min viden inde for programmering og systemudvikling. Samt at få erfaring med at bruge det jeg har lært fra min tid på Datamatiker uddannelsen, på Zealand Roskilde</p>
+                    <p class="px-3">
+                      Mine mål er at udvide min viden inde for programmering og systemudvikling.
+                      Samt at få erfaring med at bruge det jeg har lært fra min tid på Datamatiker
+                      uddannelsen, på Zealand Roskilde
+                    </p>
                   </div>
                 </div>
               </div>

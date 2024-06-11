@@ -11,11 +11,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: { name: 'Home'}
+      redirect: { name: 'Home' }
     },
     {
       path: '/#/',
-      redirect: { name: 'Home'}
+      redirect: { name: 'Home' }
     },
     {
       path: '/Home',
