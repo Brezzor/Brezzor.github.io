@@ -5,7 +5,7 @@ export default {
     return {
       typeValue: "",
       typeStatus: false,
-      displayTextArray: ["Jeg kan kode Frontend","Jeg kan kode Backend","Jeg kan arbejde med Databaser"],
+      displayTextArray: ["Jeg er Datamatiker.","Jeg kan kode Frontend.","Jeg kan kode Backend.","Jeg kan arbejde med Databaser."],
       typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,

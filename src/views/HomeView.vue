@@ -11,7 +11,7 @@ import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
           <div class="row">
             <div class="col-12">
               <div class="d-flex flex-column justify-content-center">
-                <h1 class="display-3 fw-bold">Velkommen,<br>mit navn er Oliver<br>Datamatiker</h1>
+                <h1 class="display-3 fw-bold">Velkommen,<br>mit navn er <span class="name">Oliver</span></h1>
                 <TypewriterTextComponent />
               </div>
             </div>
