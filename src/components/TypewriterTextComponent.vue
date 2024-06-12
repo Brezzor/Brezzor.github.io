@@ -55,11 +55,11 @@ export default {
 </script>
 
 <template>
-  <h1 class="display-5">
+  <h2>
     <span class="typed-text">{{ typeValue }}</span>
     <span class="blinking-cursor">|</span>
     <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
-  </h1>
+  </h2>
 </template>
 
 <style lang="scss" scoped>

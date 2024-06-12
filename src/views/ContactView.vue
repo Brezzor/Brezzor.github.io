@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container mt-4">
+  <div class="container">
     <div class="card">
       <div class="card-body">
         <div class="container text-center">

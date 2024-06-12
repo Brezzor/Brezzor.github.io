@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <header class="navbar navbar-expand-lg bg-light sticky-top shadow">
+  <header class="navbar navbar-expand-lg bg-light fixed-top shadow">
     <nav class="container-fluid">
       <RouterLink class="navbar-brand" :to="{ name: 'Home' }" v-on:click="closeNavbar">
         <img class="me-2 logo" src="@/assets/logo.webp" alt="Logo" width="35" height="35" />

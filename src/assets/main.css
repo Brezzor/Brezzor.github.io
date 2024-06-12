@@ -39,9 +39,11 @@ body {
   color: var(--primary-color);
 }
 
+/* Slide default animation */
+
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 1000ms ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 .slide-enter-to {
@@ -64,3 +66,82 @@ body {
   left: 0;
 }
 
+/* Slide-right animation */
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-right-enter-to {
+  position: absolute;
+  left: 0;
+}
+
+.slide-right-enter-from {
+  position: absolute;
+  left: -100%;
+}
+
+.slide-right-leave-to {
+  position: absolute;
+  right: 0;
+}
+
+.slide-right-leave-from {
+  position: absolute;
+  right: -100%;
+}
+
+/* Slide-left animation */
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-left-enter-to {
+  position: absolute;
+  right: 0;
+}
+
+.slide-left-enter-from {
+  position: absolute;
+  right: -100%;
+}
+
+.slide-left-leave-to {
+  position: absolute;
+  left: -100%;
+}
+
+.slide-left-leave-from {
+  position: absolute;
+  left: 0;
+}
+
+/* scale-slide animation */
+
+.scale-slide-enter-active,
+.scale-slide-leave-active {
+  position: absolute;
+  transition: all 0.7s ease;
+}
+
+.scale-slide-enter-from {
+  left: -100%;
+}
+
+.scale-slide-enter-to {
+  left: 0%;
+}
+
+.scale-slide-leave-from {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.scale-slide-leave-to {
+  transform: scale(0.5);
+  opacity: 0;
+}
