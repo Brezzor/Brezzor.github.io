@@ -23,6 +23,7 @@ html,
 body,
 #app {
   height: 100% !important;
+  overflow-x: hidden;
 }
 
 body {
