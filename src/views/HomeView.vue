@@ -41,11 +41,9 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
         </div>
         <div class="row g-sm-4 pt-4 justify-content-center">
           <div class="col-lg-3 col-md-12">
-            <MadeWithCard
-              link-url="https://vuejs.org/"
-              img-path="../assets/vue-logo.svg"
-              name-of-text="Vue.js"
-            />
+            <MadeWithCard link-url="https://vuejs.org/" name-of-text="Vue.js">
+              <img class="logo" src="../assets/vue-logo.svg" alt="vue logo">
+            </MadeWithCard>
           </div>
           <div class="col-lg-1 col-md-12">
             <div class="d-flex flex-column justify-content-center align-items-center h-100">
@@ -53,11 +51,9 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
             </div>
           </div>
           <div class="col-lg-3 col-md-12">
-            <MadeWithCard
-              link-url="https://vitejs.dev/"
-              img-path="../assets/vite-logo.svg"
-              name-of-text="Vite.js"
-            />
+            <MadeWithCard link-url="https://vitejs.dev/" name-of-text="Vite.js">
+              <img class="logo" src="../assets/vite-logo.svg" alt="vite logo">
+            </MadeWithCard>
           </div>
           <div class="col-lg-1 col-md-12">
             <div class="d-flex flex-column justify-content-center align-items-center h-100">
@@ -65,11 +61,9 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
             </div>
           </div>
           <div class="col-lg-3 col-md-12">
-            <MadeWithCard
-              link-url="https://getbootstrap.com/"
-              img-path="../assets/bootstrap-logo.svg"
-              name-of-text="Bootstrap 5"
-            />
+            <MadeWithCard link-url="https://getbootstrap.com/" name-of-text="Bootstrap 5">
+              <img class="logo" src="../assets/bootstrap-logo.svg" alt="bootstrap 5 logo">
+            </MadeWithCard>
           </div>
         </div>
       </div>

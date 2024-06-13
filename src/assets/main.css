@@ -51,6 +51,12 @@ body {
   color: var(--primary-color);
 }
 
+.logo {
+  height: 5rem;
+  max-height: 100%;
+  max-width: 100%;
+}
+
 /* Slide default animation */
 
 .slide-enter-active,
