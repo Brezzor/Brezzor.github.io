@@ -43,7 +43,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
           <div class="col-lg-3 col-md-12">
             <MadeWithCard 
             link-url="https://vuejs.org/" 
-            img-path="/src/assets/vue-logo.svg" 
+            img-path="../assets/vue-logo.svg" 
             name-of-text="Vue.js" 
             />
           </div>
@@ -55,7 +55,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
           <div class="col-lg-3 col-md-12">
             <MadeWithCard 
             link-url="https://vitejs.dev/" 
-            img-path="/src/assets/vite-logo.svg" 
+            img-path="../assets/vite-logo.svg" 
             name-of-text="Vite.js" 
             />            
           </div>
@@ -67,7 +67,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
           <div class="col-lg-3 col-md-12">
             <MadeWithCard 
             link-url="https://getbootstrap.com/" 
-            img-path="/src/assets/bootstrap-logo.svg" 
+            img-path="../assets/bootstrap-logo.svg" 
             name-of-text="Bootstrap 5" 
             />
           </div>
