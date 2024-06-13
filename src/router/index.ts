@@ -1,10 +1,4 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
-import ContactView from '../views/ContactView.vue'
-import WorksView from '../views/WorksView.vue'
-import SkillsView from '@/views/SkillsView.vue'
-import PageNotFound from '@/views/PageNotFound.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -20,32 +14,32 @@ const router = createRouter({
     {
       path: '/Home',
       name: 'Home',
-      component: HomeView
+      component: () => import('@/views/HomeView.vue')
     },
     {
       path: '/About',
       name: 'About',
-      component: AboutView
+      component: () => import('@/views/AboutView.vue')
     },
     {
       path: '/Contact',
       name: 'Contact',
-      component: ContactView
+      component: () => import('@/views/ContactView.vue')
     },
     {
       path: '/Works',
       name: 'Works',
-      component: WorksView
+      component: () => import('@/views/WorksView.vue')
     },
     {
       path: '/Skills',
       name: 'Skills',
-      component: SkillsView
+      component:() => import('@/views/SkillsView.vue')
     },
     {
       path: '/PageNotFound',
       name: 'PageNotFound',
-      component: PageNotFound
+      component: () => import('@/views/PageNotFound.vue')
     },
     {
       path: '/:pathMatch(.*)*',
