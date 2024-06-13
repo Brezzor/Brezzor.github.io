@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { ref, watchEffect } from 'vue';
 
 const props = defineProps({
   linkColor: { type: String },
@@ -9,8 +9,10 @@ const props = defineProps({
   nameOfText: { type: String, required: true }
 })
 
-const imgSrc = computed(() => {
-    return new URL(props.imgPath, import.meta.url).href
+const imgSrc = ref()
+
+watchEffect( async() => {
+    imgSrc.value = (await import(props.imgPath)).default
 })
 </script>
 
