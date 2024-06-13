@@ -80,4 +80,10 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
+.logo {
+  height: 5rem;
+  max-height: 100%;
+  max-width: 100%;
+}
 </style>
