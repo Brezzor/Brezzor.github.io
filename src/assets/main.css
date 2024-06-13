@@ -11,6 +11,18 @@
   --bg-image-size: auto;
 }
 
+.linkedin-color {
+  color: var(--linkedin-color);
+}
+
+.facebook-color {
+  color: var(--facebook-color);
+}
+
+.github-color {
+  color: var(--github-color);
+}
+
 *,
 ::before,
 ::after {

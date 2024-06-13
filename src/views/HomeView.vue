@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
+import MadeWithCard from '../components/MadeWithCardComponent.vue'
 </script>
 
 <template>
@@ -40,16 +41,11 @@ import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
         </div>
         <div class="row g-sm-4 pt-4 justify-content-center">
           <div class="col-lg-3 col-md-12">
-            <a href="https://vuejs.org/" target="_blank">
-              <div class="card">
-                <div class="card body p-4">
-                  <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                    <img class="logo" src="../assets/vue-logo.svg" alt="vue logo" />
-                    <span>Vue.js</span>
-                  </div>
-                </div>
-              </div>
-            </a>
+            <MadeWithCard 
+            link-url="https://vuejs.org/" 
+            img-path="/src/assets/vue-logo.svg" 
+            name-of-text="Vue.js" 
+            />
           </div>
           <div class="col-lg-1 col-md-12">
             <div class="d-flex flex-column justify-content-center align-items-center h-100">
@@ -57,16 +53,11 @@ import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
             </div>
           </div>
           <div class="col-lg-3 col-md-12">
-            <a href="https://vitejs.dev/" target="_blank">
-              <div class="card">
-                <div class="card body p-4">
-                  <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                    <img class="logo" src="../assets/vite-logo.svg" alt="vite logo" />
-                    <span>Vite.js</span>
-                  </div>
-                </div>
-              </div>
-            </a>
+            <MadeWithCard 
+            link-url="https://vitejs.dev/" 
+            img-path="/src/assets/vite-logo.svg" 
+            name-of-text="Vite.js" 
+            />            
           </div>
           <div class="col-lg-1 col-md-12">
             <div class="d-flex flex-column justify-content-center align-items-center h-100">
@@ -74,16 +65,11 @@ import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
             </div>
           </div>
           <div class="col-lg-3 col-md-12">
-            <a href="https://getbootstrap.com/" target="_blank">
-              <div class="card">
-                <div class="card body p-4">
-                  <div class="d-flex flex-column justify-content-stretch align-items-center h-100">
-                    <img class="logo" src="../assets/bootstrap-logo.svg" alt="bootstrap logo" />
-                    <span>Bootstrap 5</span>
-                  </div>
-                </div>
-              </div>
-            </a>
+            <MadeWithCard 
+            link-url="https://getbootstrap.com/" 
+            img-path="/src/assets/bootstrap-logo.svg" 
+            name-of-text="Bootstrap 5" 
+            />
           </div>
         </div>
       </div>
@@ -99,11 +85,5 @@ import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
   filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-}
-
-.logo {
-  height: 5rem;
-  max-height: 100%;
-  max-width: 100%;
 }
 </style>
