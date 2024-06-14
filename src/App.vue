@@ -6,14 +6,17 @@ import FooterComponent from './components/FooterComponent.vue'
 
 <template>
   <HeaderComponent />
-  <RouterView
-    v-slot="{ Component, route }"
-    class="my-4"
-    style="padding-top: 60px; padding-bottom: 70px"
-  >
+  <RouterView v-slot="{ Component, route }" class="my-4">
     <transition name="scale-slide">
       <component :is="Component" :key="route.path" />
     </transition>
   </RouterView>
   <FooterComponent />
 </template>
+
+<style scoped>
+.container {
+  padding-top: 60px;
+  padding-bottom: 70px
+}
+</style>
