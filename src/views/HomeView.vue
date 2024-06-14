@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue';
 import { RouterLink } from 'vue-router'
-import TypewriterTextComponent from '../components/TypewriterTextComponent.vue'
-import MadeWithCard from '../components/MadeWithCardComponent.vue'
+const TypewriterText = defineAsyncComponent(() =>
+  import('../components/TypewriterTextComponent.vue')
+)
+const MadeWithCard = defineAsyncComponent(() =>
+  import('../components/MadeWithCardComponent.vue')
+)
 </script>
 
 <template>
@@ -16,7 +21,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
                   <h1 class="display-4 fw-bold">
                     Velkommen,<br />mit navn er <span class="name">Oliver</span>
                   </h1>
-                  <TypewriterTextComponent :display-text-array="['Jeg er Datamatiker.',
+                  <TypewriterText :display-text-array="['Jeg er Datamatiker.',
                     'Jeg kan kode Frontend.',
                     'Jeg kan kode Backend.',
                     'Jeg kan arbejde med Databaser.']" />

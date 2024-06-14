@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import ContactCard from '../components/ContactCardComponent.vue'
+import { defineAsyncComponent } from "vue";
+const ContactCard = defineAsyncComponent(() =>
+  import('../components/ContactCardComponent.vue')
+)
 </script>
 
 <template>

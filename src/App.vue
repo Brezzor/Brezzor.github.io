@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue';
 import { RouterView } from 'vue-router'
-import HeaderComponent from './components/HeaderComponent.vue'
-import FooterComponent from './components/FooterComponent.vue'
+const HeaderComponent = defineAsyncComponent(() =>
+  import('./components/HeaderComponent.vue')
+)
+const FooterComponent = defineAsyncComponent(() =>
+  import('./components/FooterComponent.vue')
+)
 </script>
 
 <template>
