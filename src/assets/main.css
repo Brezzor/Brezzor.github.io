@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
   --linkedin-color: #0a66c2;
   --facebook-color: #0866ff;
@@ -32,13 +34,16 @@
 }
 
 html,
-body,
-#app {
-  height: 100% !important;
-  overflow-x: hidden;
+body {
+  height: 100%;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-style: var(--body-font-style);
 }
 
-body {
+#app {
+  height: 100%;
+  overflow-x: hidden;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   font-style: var(--body-font-style);
