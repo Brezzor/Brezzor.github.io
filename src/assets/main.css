@@ -5,6 +5,7 @@
   --facebook-color: #0866ff;
   --github-color: #1f2328;
   --primary-color: #5477fb;
+  --font-diplay: optional;
   --body-font-family: 'Roboto', sans-serif;
   --body-font-size: 500;
   --body-font-style: normal;
@@ -36,6 +37,7 @@
 html,
 body {
   height: 100%;
+  font-display: var(--font-diplay);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   font-style: var(--body-font-style);
@@ -44,6 +46,7 @@ body {
 #app {
   height: 100%;
   overflow-x: hidden;
+  font-display: var(--font-diplay);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   font-style: var(--body-font-style);
