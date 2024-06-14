@@ -16,7 +16,10 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
                   <h1 class="display-4 fw-bold">
                     Velkommen,<br />mit navn er <span class="name">Oliver</span>
                   </h1>
-                  <TypewriterTextComponent />
+                  <TypewriterTextComponent :display-text-array="['Jeg er Datamatiker.',
+                    'Jeg kan kode Frontend.',
+                    'Jeg kan kode Backend.',
+                    'Jeg kan arbejde med Databaser.']" />
                 </div>
               </div>
               <div class="col-12">
