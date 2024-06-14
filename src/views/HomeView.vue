@@ -31,7 +31,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <img src="../assets/my-image.webp" alt="headshot" class="image" />
+              <img src="../assets/my-image.webp" alt="headshot" class="image" height="100%" width="100%" />
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
         <div class="row g-sm-4 pt-4 justify-content-center">
           <div class="col-lg-3 col-md-12">
             <MadeWithCard link-url="https://vuejs.org/" name-of-text="Vue.js">
-              <img class="logo" src="../assets/vue-logo.svg" alt="vue logo">
+              <img class="logo" src="../assets/vue-logo.svg" alt="vue logo" height="100%" width="100%">
             </MadeWithCard>
           </div>
           <div class="col-lg-1 col-md-12">
@@ -55,7 +55,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
           </div>
           <div class="col-lg-3 col-md-12">
             <MadeWithCard link-url="https://vitejs.dev/" name-of-text="Vite.js">
-              <img class="logo" src="../assets/vite-logo.svg" alt="vite logo">
+              <img class="logo" src="../assets/vite-logo.svg" alt="vite logo" height="100%" width="100%">
             </MadeWithCard>
           </div>
           <div class="col-lg-1 col-md-12">
@@ -65,7 +65,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
           </div>
           <div class="col-lg-3 col-md-12">
             <MadeWithCard link-url="https://getbootstrap.com/" name-of-text="Bootstrap 5">
-              <img class="logo" src="../assets/bootstrap-logo.svg" alt="bootstrap 5 logo">
+              <img class="logo" src="../assets/bootstrap-logo.svg" alt="bootstrap 5 logo" height="100%" width="100%">
             </MadeWithCard>
           </div>
         </div>
@@ -86,6 +86,7 @@ import MadeWithCard from '../components/MadeWithCardComponent.vue'
 
 .logo {
   height: 5rem;
+  width: auto;
   max-height: 100%;
   max-width: 100%;
 }
