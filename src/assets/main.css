@@ -10,7 +10,7 @@
   --body-font-size: 500;
   --body-font-style: normal;
   --bg-image-url: url('./doted-paper.webp');
-  --bg-image-repeat: no-repeat;
+  --bg-image-repeat: repeat;
   --bg-image-size: auto;
 }
 
