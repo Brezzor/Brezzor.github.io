@@ -7,16 +7,12 @@ const HeaderComponent = defineAsyncComponent(() =>
 const FooterComponent = defineAsyncComponent(() =>
   import('./components/FooterComponent.vue')
 )
-
-function animationDuration() {
-  return window.innerWidth / 2.4
-}
 </script>
 
 <template>
   <HeaderComponent />
   <RouterView v-slot="{ Component, route }" class="my-4">
-    <transition name="scale-slide" :duration="{ enter: animationDuration(), leave: 300 }">
+    <transition name="scale-slide">
       <component :is="Component" :key="route.path" />
     </transition>
   </RouterView>
@@ -38,11 +34,13 @@ function animationDuration() {
 
 .scale-slide-leave-active {
   transition-property: all;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
 
 .scale-slide-enter-active {
   transition-property: all;
+  transition-duration: 0.8s;
   transition-timing-function: cubic-bezier(1, 0.5, 0.8, 1);
 }
 
