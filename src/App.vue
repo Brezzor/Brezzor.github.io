@@ -11,7 +11,7 @@ const FooterComponent = defineAsyncComponent(() =>
 
 <template>
   <HeaderComponent />
-  <RouterView v-slot="{ Component, route }" class="my-4">
+  <RouterView v-slot="{ Component, route }">
     <transition name="scale-slide">
       <component :is="Component" :key="route.path" />
     </transition>
@@ -21,8 +21,10 @@ const FooterComponent = defineAsyncComponent(() =>
 
 <style scoped>
 .container {
-  padding-top: 60px;
-  padding-bottom: 70px
+  min-height: calc(100% - 7.3rem);
+  margin-top: 3.8125rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* scale-slide animation */

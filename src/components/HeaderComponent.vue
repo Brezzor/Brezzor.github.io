@@ -27,32 +27,40 @@ export default {
         <img class="me-2 logo" src="@/assets/logo.webp" alt="Logo" width="35" height="35" />
         <span class="align-middle">Oliver - Portfolio</span>
       </RouterLink>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" :aria-expanded="show ? 'true' : 'false'" aria-label="Toggle navigation"
-        v-on:click="toggleNavbar">
+      <button class="navbar-toggler" type="button" :aria-expanded="show ? 'true' : 'false'"
+        aria-label="Toggle navigation" v-on:click="toggleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" :class="show ? 'show' : ''" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0 nav-underline fw-bold">
+      <div class="collapse navbar-collapse" :class="show ? 'show' : ''">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 nav-underline fw-bold">
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Home' }" v-on:click="closeNavbar">Hjem
+            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Home' }" v-on:click="closeNavbar">
+              <i class="bi bi-house-fill pe-2"></i>
+              <span>Hjem</span>
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'About' }" v-on:click="closeNavbar">Om mig
+            <RouterLink class="nav-link" active-class="active" :to="{ name: 'About' }" v-on:click="closeNavbar">
+              <i class="bi bi-person-fill-exclamation pe-2"></i>
+              <span>Om mig</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Skills' }" v-on:click="closeNavbar">
-              Færdigheder</RouterLink>
+              <i class="bi bi-person-fill-gear pe-2"></i>
+              <span>Færdigheder</span>
+            </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Works' }" v-on:click="closeNavbar">Arbejde
+            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Works' }" v-on:click="closeNavbar">
+              <i class="bi bi-suitcase-lg-fill pe-2"></i>
+              <span>Arbejde</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Contact' }" v-on:click="closeNavbar">
-              Kontakt
+              <i class="bi bi-person-lines-fill pe-2"></i>
+              <span>Kontakt</span>
             </RouterLink>
           </li>
         </ul>

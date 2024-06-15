@@ -2,7 +2,7 @@
 
 <template>
   <div class="container">
-    <div class="card">
+    <div class="card shadow">
       <div class="card-body">
         <h1 class="text-center">Hvem er jeg</h1>
         <div class="container pt-2">
@@ -59,15 +59,11 @@
                     <div class="card-body">
                       <h2 class="text-center">Uddannelse</h2>
                       <ul class="list-group list-group-flush">
-                        <li
-                          class="list-group-item d-flex justify-content-between align-items-center"
-                        >
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                           Datamatiker
                           <span class="badge text-bg-primary rounded-pill">Færdiggjort 2024</span>
                         </li>
-                        <li
-                          class="list-group-item d-flex justify-content-between align-items-center"
-                        >
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
                           EUX Elektriker
                           <span class="badge text-bg-primary rounded-pill">Færdiggjort 2020</span>
                         </li>

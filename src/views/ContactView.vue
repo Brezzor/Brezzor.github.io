@@ -7,7 +7,7 @@ const ContactCard = defineAsyncComponent(() =>
 
 <template>
   <div class="container">
-    <div class="card">
+    <div class="card shadow">
       <div class="card-body">
         <div class="container text-center">
           <h1>Kontakt mig</h1>
