@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue';
 
 const props = defineProps({
   displayTextArray: { type: Array<String>, required: true },
+  textClass: { type: String, required: true },
   typingSpeed: { type: Number, default: 100 },
   erasingSpeed: { type: Number, default: 100 },
   newTextDelay: { type: Number, default: 2000 },
@@ -51,11 +52,11 @@ function eraseText() {
 </script>
 
 <template>
-  <h2>
+  <p :class="textClass">
     <span class="typed-text">{{ refs.typeValue }}</span>
     <span class="blinking-cursor">|</span>
     <span class="cursor" :class="{ typing: refs.typeStatus }">&nbsp;</span>
-  </h2>
+  </p>
 </template>
 
 <style lang="scss" scoped>
