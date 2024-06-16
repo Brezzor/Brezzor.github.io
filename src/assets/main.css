@@ -5,6 +5,9 @@
   --facebook-color: #0866ff;
   --github-color: #1f2328;
   --primary-color: #5477fb;
+  --primary-border-color: #5477fb;
+  --primary-hover-color: #7895ff;
+  --primary-border-hover-color: #7895ff;
   --font-diplay: optional;
   --body-font-family: 'Roboto', sans-serif;
   --body-font-size: 500;
@@ -57,4 +60,63 @@ body {
 
 .name {
   color: var(--primary-color);
+}
+
+.navbar-brand .logo,
+.icon-link .bi::before {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover .logo,
+.icon-link:hover .bi::before {
+  transform: rotate(-5deg) scale(1.2);
+}
+
+.made-with .card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.made-with:hover .card {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.nav-link:hover .bi::before {
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.list-group-item:hover .bi::before {
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-5deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-border-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover-color) !important;
+  border-color: var(--primary-border-hover-color) !important;
 }

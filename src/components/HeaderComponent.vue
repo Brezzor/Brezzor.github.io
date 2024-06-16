@@ -36,30 +36,35 @@ export default {
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Home' }" v-on:click="closeNavbar">
               <i class="bi bi-house-fill pe-2"></i>
+              <span class="pe-2">-</span>
               <span>Hjem</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'About' }" v-on:click="closeNavbar">
-              <i class="bi bi-person-fill-exclamation pe-2"></i>
+              <i class="bi bi-info-circle-fill pe-2"></i>
+              <span class="pe-2">-</span>
               <span>Om mig</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Skills' }" v-on:click="closeNavbar">
-              <i class="bi bi-person-fill-gear pe-2"></i>
+              <i class="bi bi-tools pe-2"></i>
+              <span class="pe-2">-</span>
               <span>Færdigheder</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Works' }" v-on:click="closeNavbar">
-              <i class="bi bi-suitcase-lg-fill pe-2"></i>
+              <i class="bi bi-code-slash pe-2"></i>
+              <span class="pe-2">-</span>
               <span>Arbejde</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Contact' }" v-on:click="closeNavbar">
               <i class="bi bi-person-lines-fill pe-2"></i>
+              <span class="pe-2">-</span>
               <span>Kontakt</span>
             </RouterLink>
           </li>
