@@ -68,7 +68,9 @@ body {
 }
 
 .navbar-brand:hover .logo,
-.icon-link:hover .bi::before {
+.icon-link:hover .bi::before,
+.navbar-brand:focus .logo,
+.icon-link:focus .bi::before {
   transform: rotate(-5deg) scale(1.2);
 }
 
@@ -76,24 +78,9 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.made-with:hover .card {
+.made-with:hover .card,
+.made-with:focus .card {
   transform: rotate(-2deg) scale(1.05);
-}
-
-.nav-link:hover .bi::before {
-  animation-name: shake;
-  animation-duration: 0.4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.list-group-item:hover .bi::before {
-  animation-name: shake;
-  animation-duration: 0.4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
 }
 
 @keyframes shake {

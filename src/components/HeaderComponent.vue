@@ -78,4 +78,13 @@ export default {
 .logo {
   filter: drop-shadow(2px 2px 2px rgb(0 0 0 / .5));
 }
+
+.nav-link:hover .bi::before,
+.nav-link:focus .bi::before {
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
 </style>

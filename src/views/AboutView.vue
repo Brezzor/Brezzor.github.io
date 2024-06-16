@@ -96,4 +96,12 @@
 .list-group-item:hover {
   color: var(--primary-color);
 }
+
+.list-group-item:hover .bi::before {
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
 </style>
