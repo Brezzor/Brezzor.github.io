@@ -31,8 +31,8 @@ export default {
         aria-label="Toggle navigation" v-on:click="toggleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" :class="show ? 'show' : ''">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 nav-underline fw-bold">
+      <div class="collapse navbar-collapse justify-content" :class="show ? 'show' : ''">
+        <ul class="navbar-nav my-2 my-lg-0 nav-underline fw-bold">
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Home' }" v-on:click="closeNavbar">
               <i class="bi bi-house-fill pe-2"></i>
@@ -86,5 +86,17 @@ export default {
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+}
+
+@media (min-width: 1047px) {
+  .navbar-collapse {
+    margin-right: 185.95px;
+  }
+}
+
+@media (min-width: 1047px) {
+  .justify-content {
+    justify-content: center !important;
+  }
 }
 </style>
