@@ -83,6 +83,7 @@ const MadeWithCard = defineAsyncComponent(() =>
 <style scoped>
 .image {
   width: 50%;
+  height: auto;
   max-height: 100%;
   max-width: 100%;
   filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
