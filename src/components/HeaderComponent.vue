@@ -88,13 +88,13 @@ export default {
   animation-fill-mode: forwards;
 }
 
-@media (min-width: 1047px) {
+@media (min-width: 1246px) {
   .navbar-collapse {
-    margin-right: 185.95px;
+    margin-right: 259px;
   }
 }
 
-@media (min-width: 1047px) {
+@media (min-width: 1246px) {
   .justify-content {
     justify-content: center !important;
   }
