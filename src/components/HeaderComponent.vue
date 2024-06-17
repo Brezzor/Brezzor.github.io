@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <header class="navbar navbar-expand-lg bg-light fixed-top shadow">
+  <header class="navbar navbar-expand-custom bg-light fixed-top shadow">
     <nav class="container-fluid">
       <RouterLink class="navbar-brand" :to="{ name: 'Home' }" v-on:click="closeNavbar">
         <img class="me-2 logo" src="@/assets/logo.webp" alt="Logo" width="35" height="35" />
@@ -31,7 +31,7 @@ export default {
         aria-label="Toggle navigation" v-on:click="toggleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content" :class="show ? 'show' : ''">
+      <div class="collapse navbar-collapse justify-content-custom" :class="show ? 'show' : ''">
         <ul class="navbar-nav my-2 my-lg-0 nav-underline fw-bold">
           <li class="nav-item">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Home' }" v-on:click="closeNavbar">
@@ -58,7 +58,7 @@ export default {
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Works' }" v-on:click="closeNavbar">
               <i class="bi bi-code-slash pe-2"></i>
               <span class="pe-2">-</span>
-              <span>Arbejde</span>
+              <span>Projekter</span>
             </RouterLink>
           </li>
           <li class="nav-item">
@@ -88,15 +88,40 @@ export default {
   animation-fill-mode: forwards;
 }
 
-@media (min-width: 1246px) {
+@media (min-width: 1266px) {
   .navbar-collapse {
     margin-right: 259px;
   }
 }
 
-@media (min-width: 1246px) {
-  .justify-content {
+@media (min-width: 1266px) {
+  .justify-content-custom {
     justify-content: center !important;
+  }
+}
+
+@media (min-width: 1007px) {
+  .navbar-expand-custom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-custom .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar-expand-custom>.container {
+    flex-wrap: nowrap;
+  }
+
+  .navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
   }
 }
 </style>
