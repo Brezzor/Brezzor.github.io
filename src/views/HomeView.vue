@@ -37,7 +37,7 @@ const MadeWithCard = defineAsyncComponent(() =>
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <img src="../assets/my-image-flipped.webp" alt="headshot" class="image floating mirror" height="100%"
+              <img src="../assets/my-image-flipped.webp" alt="headshot" class="image floating" height="100%"
                 width="100%" />
             </div>
           </div>
