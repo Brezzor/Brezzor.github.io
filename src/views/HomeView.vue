@@ -37,7 +37,8 @@ const MadeWithCard = defineAsyncComponent(() =>
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <img src="../assets/my-image.webp" alt="headshot" class="image" height="100%" width="100%" />
+              <img src="../assets/my-image.webp" alt="headshot" class="image floating mirror" height="100%"
+                width="100%" />
             </div>
           </div>
         </div>
@@ -87,8 +88,6 @@ const MadeWithCard = defineAsyncComponent(() =>
   max-height: 100%;
   max-width: 100%;
   filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
 
 .logo {

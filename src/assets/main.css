@@ -4,6 +4,8 @@
   --linkedin-color: #0a66c2;
   --facebook-color: #0866ff;
   --github-color: #1f2328;
+  --instagram-color: circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%,
+    #285aeb 90%;
   --primary-color: #5477fb;
   --primary-border-color: #5477fb;
   --primary-hover-color: #7895ff;
@@ -27,6 +29,17 @@
 
 .github-color {
   color: var(--github-color);
+}
+
+.insta-color {
+  color: var(--instagram-color);
+  background: -moz-radial-gradient(var(--instagram-color));
+  background: -webkit-radial-gradient(var(--instagram-color));
+  background: radial-gradient(var(--instagram-color));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 *,
@@ -62,6 +75,11 @@ body {
   color: var(--primary-color);
 }
 
+.mirror::before {
+  -webkit-transform: scaleX(-1) !important;
+  transform: scaleX(-1) !important;
+}
+
 .navbar-brand .logo,
 .icon-link .bi::before {
   transition: transform 0.3s ease-in-out;
@@ -95,6 +113,26 @@ body {
   }
   100% {
     transform: rotate(0) scale(1);
+  }
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

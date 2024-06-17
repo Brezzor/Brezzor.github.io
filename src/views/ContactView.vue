@@ -12,12 +12,12 @@ const ContactCard = defineAsyncComponent(() =>
         <div class="container text-center">
           <h1>Kontakt mig</h1>
           <div class="row g-4">
-            <div class="col-md-12 col-lg-6">
+            <div class="col-md-12 col-lg-5">
               <div class="d-flex justify-content-center align-items-center h-100">
-                <img class="image" src="../assets/my-image.webp" alt="headshot" height="100%" width="100%" />
+                <img class="image floating" src="../assets/my-image.webp" alt="headshot" height="100%" width="100%" />
               </div>
             </div>
-            <div class="col-md-12 col-lg-6">
+            <div class="col-md-12 col-lg-7">
               <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="row g-4">
                   <div class="col-xs-12 col-sm-6">
@@ -41,6 +41,10 @@ const ContactCard = defineAsyncComponent(() =>
                   <div class="col-xs-12 col-sm-6">
                     <ContactCard icon-name="bi-github" icon-color="github-color" contact-name="Github"
                       contact-url="https://github.com/Brezzor?tab=repositories" contact-url-text="Brezzor" />
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <ContactCard icon-name="bi-instagram" icon-color="insta-color" contact-name="Instagram"
+                      contact-url="https://www.instagram.com/oliv3702/" contact-url-text="oliv3702" />
                   </div>
                 </div>
               </div>
