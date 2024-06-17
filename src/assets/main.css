@@ -75,11 +75,6 @@ body {
   color: var(--primary-color);
 }
 
-.mirror::after {
-  -webkit-transform: scaleX(-1) !important;
-  transform: scaleX(-1) !important;
-}
-
 .navbar-brand .logo,
 .icon-link .bi::before {
   transition: transform 0.3s ease-in-out;
