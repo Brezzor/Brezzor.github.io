@@ -13,7 +13,7 @@ const MadeWithCard = defineAsyncComponent(() =>
   <div class="container">
     <div class="card shadow">
       <div class="card-body">
-        <div class="row gap-lg-0 gap-4">
+        <div class="row g-4 g-lg-0">
           <div class="col-lg-6 col-md-12">
             <div class="row">
               <div class="col-12">
@@ -29,14 +29,14 @@ const MadeWithCard = defineAsyncComponent(() =>
                 </div>
               </div>
               <div class="col-12">
-                <div class="text-center pt-4">
+                <div class="text-center">
                   <RouterLink class="btn btn-primary" to="/contact">Kontakt</RouterLink>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
-            <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="d-flex justify-content-center align-items-center h-100 py-4 py-lg-0">
               <img src="../assets/my-image-flipped.webp" alt="headshot" class="image floating" height="100%"
                 width="100%" />
             </div>
