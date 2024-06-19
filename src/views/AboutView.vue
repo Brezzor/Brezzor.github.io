@@ -59,13 +59,25 @@
                     <div class="card-body">
                       <h2 class="text-center">Uddannelse</h2>
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          Datamatiker
-                          <span class="badge text-bg-primary rounded-pill">Færdiggjort 2024</span>
+                        <li class="list-group-item">
+                          <div class="row g-2 g-sm-0">
+                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start">
+                              <span>Datamatiker</span>
+                            </div>
+                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
+                              <span class="badge text-bg-primary rounded-pill">Færdiggjort 2024</span>
+                            </div>
+                          </div>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          EUX Elektriker
-                          <span class="badge text-bg-primary rounded-pill">Færdiggjort 2020</span>
+                        <li class="list-group-item">
+                          <div class="row g-2 g-sm-0">
+                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start">
+                              <span>EUX Elektriker</span>
+                            </div>
+                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
+                              <span class="badge text-bg-primary rounded-pill">Færdiggjort 2020</span>
+                            </div>
+                          </div>
                         </li>
                       </ul>
                     </div>

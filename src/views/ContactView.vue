@@ -13,8 +13,9 @@ const ContactCard = defineAsyncComponent(() =>
           <h1>Kontakt mig</h1>
           <div class="row g-4">
             <div class="col-md-12 col-lg-5">
-              <div class="d-flex justify-content-center align-items-center h-100">
-                <img class="image floating" src="../assets/my-image.webp" alt="headshot" height="100%" width="100%" />
+              <div class="d-flex justify-content-center align-items-center h-100 py-4 py-lg-0">
+                <img class="my-image floating" src="../assets/my-image.webp" alt="headshot" height="100%"
+                  width="100%" />
               </div>
             </div>
             <div class="col-md-12 col-lg-7">
@@ -56,12 +57,4 @@ const ContactCard = defineAsyncComponent(() =>
   </div>
 </template>
 
-<style scoped>
-.image {
-  height: 50%;
-  width: auto;
-  max-height: 100%;
-  max-width: 100%;
-  filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
-}
-</style>
+<style scoped></style>

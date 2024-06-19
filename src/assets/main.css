@@ -75,6 +75,13 @@ body {
   color: var(--primary-color);
 }
 
+.my-image {
+  height: 100%;
+  max-width: 265px;
+  max-height: 265px;
+  filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
+}
+
 .navbar-brand .logo,
 .icon-link .bi::before {
   transition: transform 0.3s ease-in-out;

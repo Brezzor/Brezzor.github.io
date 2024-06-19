@@ -33,7 +33,7 @@ const MadeWithCard = defineAsyncComponent(() =>
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="d-flex justify-content-center align-items-center h-100 py-4">
-              <img src="../assets/my-image-flipped.webp" alt="headshot" class="image floating" height="100%"
+              <img src="../assets/my-image-flipped.webp" alt="headshot" class="my-image floating" height="100%"
                 width="100%" />
             </div>
           </div>
@@ -78,14 +78,6 @@ const MadeWithCard = defineAsyncComponent(() =>
 </template>
 
 <style scoped>
-.image {
-  width: 50%;
-  height: auto;
-  max-height: 100%;
-  max-width: 100%;
-  filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
-}
-
 .logo {
   height: 5rem;
   width: auto;
