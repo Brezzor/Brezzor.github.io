@@ -9,6 +9,7 @@ const FooterComponent = defineAsyncComponent(() =>
 )
 </script>
 
+
 <template>
   <HeaderComponent />
   <RouterView v-slot="{ Component, route }">
