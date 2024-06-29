@@ -1,33 +1,19 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useRouter } from "vue-router";
-const email = ref('')
-const password = ref('')
-const errMsg = ref('')
-const router = useRouter()
-const signIn = () => {
-    signInWithEmailAndPassword(getAuth(), email.value, password.value)
-        .then(() => {
-            router.push({ name: 'Feed' })
-        })
-        .catch((error) => {
-            switch (error.code) {
-                case 'auth/invalid-email':
-                    errMsg.value = 'Invalid email'
-                    break
-                case 'auth/user-not-found':
-                    errMsg.value = 'No account with that email was found'
-                    break
-                case 'auth/wrong-password':
-                    errMsg.value = 'Incorrect password'
-                    break
-                default:
-                    errMsg.value = 'Email or password was incorrect'
-                    break
-            }
-        })
+import { computed, ref } from "vue";
+import { useAuthStore } from "@/stores/AuthStore";
+const authStore = useAuthStore()
+const email = ref<string>('')
+const password = ref<string>('')
+const showPassword = ref<boolean>(false)
+const toggleShow = () => {
+    showPassword.value = !showPassword.value
 }
+const inputType = computed(() => {
+    return (showPassword.value) ? 'text' : 'password'
+})
+const showPasswordIcon = computed(() => {
+    return (showPassword.value) ? 'bi-eye' : 'bi-eye-slash'
+}) 
 </script>
 
 <template>
@@ -38,8 +24,8 @@ const signIn = () => {
                 <div class="m-3 m-sm-4 m-md-5">
                     <div class="d-flex justify-content-center">
                         <form @submit.prevent>
-                            <div class="mb-3" v-if="errMsg">
-                                <span class="text-danger fw-bold mb-3">{{ errMsg }}</span>
+                            <div class="mb-3" v-if="authStore.errMsg">
+                                <span class="text-danger fw-bold mb-3">{{ authStore.errMsg }}</span>
                             </div>
                             <div class="mb-3">
                                 <label for="loginEmail" class="form-label">Email address</label>
@@ -48,11 +34,27 @@ const signIn = () => {
                             </div>
                             <div class="mb-3">
                                 <label for="loginPassword" class="form-label">Password</label>
-                                <input type="password" name="password" id="loginPassword" placeholder="Password"
-                                    class="form-control" v-model="password">
+                                <div class="input-group">
+                                    <input :type="inputType" name="password" id="loginPassword" placeholder="Password"
+                                        class="form-control" v-model="password">
+                                    <div class="input-group-text p-0">
+                                        <button class="btn py-0" v-on:click="toggleShow"><i class="bi"
+                                                aria-hidden="true" :class="showPasswordIcon"></i></button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary" v-on:click="signIn()">Login</button>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="loginRemember"
+                                        id="loginRemember" v-model="authStore.rememberMe">
+                                    <label class="form-check-label" for="loginRemember">
+                                        Husk mig
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-primary"
+                                    v-on:click="authStore.loginUser(email, password)">Login</button>
                             </div>
                             <div>
                                 <span>Har du ikke en konto? </span>

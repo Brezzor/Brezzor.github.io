@@ -1,26 +1,14 @@
 <script setup lang="ts">
+import { useAuthStore } from '@/stores/AuthStore';
 import { ref } from 'vue';
-import { RouterLink, useRouter } from 'vue-router'
-import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { RouterLink } from 'vue-router'
+const authStore = useAuthStore()
 const show = ref(false)
-const isLoggedIn = ref(false)
-const router = useRouter()
 const closeNavbar = () => {
   show.value = false
 }
 const toggleNavbar = () => {
   show.value = !show.value
-}
-onAuthStateChanged(getAuth(), (user) => {
-  if (user) {
-    isLoggedIn.value = true
-  } else {
-    isLoggedIn.value = false
-  }
-})
-const signOutUser = () => {
-  signOut(getAuth())
-  router.push({ name: 'Home' })
 }
 </script>
 
@@ -74,7 +62,7 @@ const signOutUser = () => {
               <span>Kontakt</span>
             </RouterLink>
           </li>
-          <li class="nav-item" v-if="isLoggedIn">
+          <li class="nav-item" v-if="authStore.isLoggedIn">
             <RouterLink class="nav-link" active-class="active" :to="{ name: 'Feed' }" v-on:click="closeNavbar">
               <i class="bi bi-grid-fill pe-2"></i>
               <span class="pe-2">-</span>
@@ -83,11 +71,13 @@ const signOutUser = () => {
           </li>
         </ul>
         <div class="mt-2 mt-lg-0">
-          <RouterLink class="btn btn-primary me-2" :to="{ name: 'Login' }" v-if="!isLoggedIn" v-on:click="closeNavbar">
+          <RouterLink class="btn btn-primary me-2" :to="{ name: 'Login' }" v-if="!authStore.isLoggedIn"
+            v-on:click="closeNavbar">
             Login</RouterLink>
-          <RouterLink class="btn btn-primary" :to="{ name: 'Register' }" v-if="!isLoggedIn" v-on:click="closeNavbar">
+          <RouterLink class="btn btn-primary" :to="{ name: 'Register' }" v-if="!authStore.isLoggedIn"
+            v-on:click="closeNavbar">
             register</RouterLink>
-          <button class="btn btn-primary" v-on:click="signOutUser()" v-else>Logout</button>
+          <button class="btn btn-primary" v-on:click="authStore.signOutUser()" v-else>Logout</button>
         </div>
       </div>
     </nav>

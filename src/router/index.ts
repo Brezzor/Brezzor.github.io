@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { getAuth, onAuthStateChanged, type User } from 'firebase/auth'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -68,7 +68,7 @@ const router = createRouter({
 })
 
 const getCurrentUser = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise<User | null>((resolve, reject) => {
     const removeListener = onAuthStateChanged(
       getAuth(),
       (user) => {

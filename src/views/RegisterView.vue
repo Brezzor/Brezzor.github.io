@@ -1,33 +1,19 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useRouter } from "vue-router";
+import { computed, ref } from "vue";
+import { useAuthStore } from "@/stores/AuthStore";
+const authStore = useAuthStore()
 const email = ref('')
 const password = ref('')
-const errMsg = ref('')
-const router = useRouter()
-const login = () => {
-    createUserWithEmailAndPassword(getAuth(), email.value, password.value)
-        .then(() => {
-            router.push({ name: 'Feed' })
-        })
-        .catch((error) => {
-            switch (error.code) {
-                case 'auth/invalid-email':
-                    errMsg.value = 'Invalid email'
-                    break
-                case 'auth/missing-password':
-                    errMsg.value = 'Missing password'
-                    break
-                case 'auth/weak-password':
-                    errMsg.value = 'Password is too weak'
-                    break
-                default:
-                    errMsg.value = 'Email already in use'
-                    break
-            }
-        })
+const showPassword = ref<boolean>(false)
+const toggleShow = () => {
+    showPassword.value = !showPassword.value
 }
+const inputType = computed(() => {
+    return (showPassword.value) ? 'text' : 'password'
+})
+const showPasswordIcon = computed(() => {
+    return (showPassword.value) ? 'bi-eye' : 'bi-eye-slash'
+}) 
 </script>
 
 <template>
@@ -38,8 +24,8 @@ const login = () => {
                 <div class="m-3 m-sm-4 m-md-5">
                     <div class="d-flex justify-content-center">
                         <form @submit.prevent>
-                            <div class="mb-3" v-if="errMsg">
-                                <span class="text-danger fw-bold underline mb-3">{{ errMsg }}</span>
+                            <div class="mb-3" v-if="authStore.errMsg">
+                                <span class="text-danger fw-bold underline mb-3">{{ authStore.errMsg }}</span>
                             </div>
                             <div class="mb-3">
                                 <label for="loginEmail" class="form-label">Email address</label>
@@ -48,11 +34,27 @@ const login = () => {
                             </div>
                             <div class="mb-3">
                                 <label for="loginPassword" class="form-label">Password</label>
-                                <input type="password" name="password" id="loginPassword" placeholder="Password"
-                                    class="form-control" v-model="password">
+                                <div class="input-group">
+                                    <input :type="inputType" name="password" id="loginPassword" placeholder="Password"
+                                        class="form-control" v-model="password">
+                                    <div class="input-group-text p-0">
+                                        <button class="btn py-0" v-on:click="toggleShow"><i class="bi"
+                                                aria-hidden="true" :class="showPasswordIcon"></i></button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary" v-on:click="login()">Register</button>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="registerRemember"
+                                        id="registerRemember" v-model="authStore.rememberMe">
+                                    <label class="form-check-label" for="registerRemember">
+                                        Husk mig
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-primary"
+                                    v-on:click="authStore.registerUser(email, password)">Register</button>
                             </div>
                             <div>
                                 <span>Har du allerede en konto? </span>
