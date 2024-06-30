@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import { getAuth, onAuthStateChanged, type User } from 'firebase/auth'
 
 const router = createRouter({
+  linkActiveClass: 'active',
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -51,6 +52,14 @@ const router = createRouter({
       path: '/Feed',
       name: 'Feed',
       component: () => import('@/views/FeedView.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/Account',
+      name: 'Account',
+      component: () => import('@/views/AccountView.vue'),
       meta: {
         requiresAuth: true
       }

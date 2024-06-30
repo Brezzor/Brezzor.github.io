@@ -9,20 +9,19 @@ import {
   browserLocalPersistence,
   signOut,
   createUserWithEmailAndPassword,
-  type UserCredential,
   type Persistence,
-  type User,
   onAuthStateChanged
 } from 'firebase/auth'
 
 export const useAuthStore = defineStore('authStore', () => {
   const errMsg = ref<null | string>(null)
   const isLoggedIn = ref<boolean>(false)
+  const loadingSession = ref<boolean>(true)
   const rememberMe = ref<boolean>(false)
-  const user = ref<null | User>(null)
+
+  const auth = getAuth()
 
   const loginUser = (email: string, password: string) => {
-    const auth = getAuth()
     let persistenceType: Persistence = browserSessionPersistence
     if (rememberMe.value) {
       persistenceType = browserLocalPersistence
@@ -32,10 +31,9 @@ export const useAuthStore = defineStore('authStore', () => {
     setPersistence(auth, persistenceType)
       .then(() => {
         return signInWithEmailAndPassword(auth, email, password)
-          .then((data: UserCredential) => {
+          .then(() => {
             isLoggedIn.value = true
             errMsg.value = null
-            user.value = data.user
             router.push({ name: 'Feed' })
           })
           .catch((error) => {
@@ -67,7 +65,6 @@ export const useAuthStore = defineStore('authStore', () => {
   }
 
   const registerUser = (email: string, password: string) => {
-    const auth = getAuth()
     let persistenceType: Persistence = browserSessionPersistence
     if (rememberMe.value) {
       persistenceType = browserLocalPersistence
@@ -77,10 +74,9 @@ export const useAuthStore = defineStore('authStore', () => {
     setPersistence(auth, persistenceType)
       .then(() => {
         return createUserWithEmailAndPassword(auth, email, password)
-          .then((data: UserCredential) => {
+          .then(() => {
             isLoggedIn.value = true
             errMsg.value = null
-            user.value = data.user
             router.push({ name: 'Feed' })
           })
           .catch((error) => {
@@ -106,26 +102,26 @@ export const useAuthStore = defineStore('authStore', () => {
   }
 
   const signOutUser = () => {
-    const auth = getAuth()
     signOut(auth)
     isLoggedIn.value = false
     router.push({ name: 'Home' })
   }
 
-  onAuthStateChanged(getAuth(), (currentUser) => {
-    user.value = currentUser
+  onAuthStateChanged(auth, (currentUser) => {
+    loadingSession.value = true
     if (currentUser) {
       isLoggedIn.value = true
     } else {
       isLoggedIn.value = false
     }
+    loadingSession.value = false
   })
 
   return {
     errMsg,
     isLoggedIn,
+    loadingSession,
     rememberMe,
-    user,
     loginUser,
     registerUser,
     signOutUser

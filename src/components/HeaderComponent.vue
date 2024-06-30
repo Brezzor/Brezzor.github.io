@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useAuthStore } from '@/stores/AuthStore';
-import { ref } from 'vue';
+import { defineAsyncComponent, ref } from 'vue';
 import { RouterLink } from 'vue-router'
 const authStore = useAuthStore()
 const show = ref(false)
@@ -10,10 +10,13 @@ const closeNavbar = () => {
 const toggleNavbar = () => {
   show.value = !show.value
 }
+const accountDropdown = defineAsyncComponent(() =>
+  import('../components/AccountDropdownComponent.vue')
+)
 </script>
 
 <template>
-  <header class="navbar navbar-expand-custom bg-light fixed-top shadow">
+  <header class="navbar navbar-expand-custom navbar-light bg-light fixed-top shadow">
     <nav class="container-fluid">
       <div>
         <RouterLink class="navbar-brand" :to="{ name: 'Home' }" v-on:click="closeNavbar">
@@ -25,60 +28,54 @@ const toggleNavbar = () => {
         v-on:click="toggleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-custom" :class="show && 'show'">
-        <ul class="navbar-nav mt-2 my-lg-0 me-lg-2 nav-underline fw-bold">
+      <div class="collapse navbar-collapse" :class="show && 'show'">
+        <ul class="d-flex navbar-nav nav-underline fw-bold w-100">
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Home' }" v-on:click="closeNavbar">
+            <RouterLink class="nav-link" :to="{ name: 'Home' }" v-on:click="closeNavbar">
               <i class="bi bi-house-fill pe-2"></i>
               <span class="pe-2">-</span>
               <span>Hjem</span>
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'About' }" v-on:click="closeNavbar">
+            <RouterLink class="nav-link" :to="{ name: 'About' }" v-on:click="closeNavbar">
               <i class="bi bi-info-circle-fill pe-2"></i>
               <span class="pe-2">-</span>
               <span>Om mig</span>
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Skills' }" v-on:click="closeNavbar">
+            <RouterLink class="nav-link" :to="{ name: 'Skills' }" v-on:click="closeNavbar">
               <i class="bi bi-tools pe-2"></i>
               <span class="pe-2">-</span>
               <span>Færdigheder</span>
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Works' }" v-on:click="closeNavbar">
+            <RouterLink class="nav-link" :to="{ name: 'Works' }" v-on:click="closeNavbar">
               <i class="bi bi-code-slash pe-2"></i>
               <span class="pe-2">-</span>
               <span>Projekter</span>
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Contact' }" v-on:click="closeNavbar">
+            <RouterLink class="nav-link" :to="{ name: 'Contact' }" v-on:click="closeNavbar">
               <i class="bi bi-person-lines-fill pe-2"></i>
               <span class="pe-2">-</span>
               <span>Kontakt</span>
             </RouterLink>
           </li>
-          <li class="nav-item" v-if="authStore.isLoggedIn">
-            <RouterLink class="nav-link" active-class="active" :to="{ name: 'Feed' }" v-on:click="closeNavbar">
-              <i class="bi bi-grid-fill pe-2"></i>
-              <span class="pe-2">-</span>
-              <span>Feed</span>
-            </RouterLink>
-          </li>
+          <div class="ms-0 ms-custom-auto" v-if="!authStore.loadingSession && !authStore.loadingSession">
+            <li class="nav-item" v-if="!authStore.isLoggedIn">
+              <RouterLink class=" btn btn-outline-primary me-2" :to="{ name: 'Login' }" v-on:click="closeNavbar">
+                Login</RouterLink>
+              <RouterLink class="btn btn-primary" :to="{ name: 'Register' }" v-on:click="closeNavbar">
+                register</RouterLink>
+
+            </li>
+            <accountDropdown v-else />
+          </div>
         </ul>
-        <div class="mt-2 mt-lg-0">
-          <RouterLink class="btn btn-primary me-2" :to="{ name: 'Login' }" v-if="!authStore.isLoggedIn"
-            v-on:click="closeNavbar">
-            Login</RouterLink>
-          <RouterLink class="btn btn-primary" :to="{ name: 'Register' }" v-if="!authStore.isLoggedIn"
-            v-on:click="closeNavbar">
-            register</RouterLink>
-          <button class="btn btn-primary" v-on:click="authStore.signOutUser()" v-else>Logout</button>
-        </div>
       </div>
     </nav>
   </header>
@@ -96,18 +93,6 @@ const toggleNavbar = () => {
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-}
-
-@media (min-width: 1474px) {
-  .navbar-collapse {
-    margin-right: 259px;
-  }
-}
-
-@media (min-width: 1474px) {
-  .justify-content-custom {
-    justify-content: center !important;
-  }
 }
 
 @media (min-width: 1215px) {
@@ -132,6 +117,10 @@ const toggleNavbar = () => {
 
   .navbar-expand-custom .navbar-toggler {
     display: none;
+  }
+
+  .ms-custom-auto {
+    margin-left: auto !important;
   }
 }
 </style>

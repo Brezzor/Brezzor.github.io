@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useUserStore } from '@/stores/UserStore';
 import { defineAsyncComponent } from 'vue';
 import { RouterLink } from 'vue-router'
 const TypewriterText = defineAsyncComponent(() =>
@@ -7,6 +8,7 @@ const TypewriterText = defineAsyncComponent(() =>
 const MadeWithCard = defineAsyncComponent(() =>
   import('../components/MadeWithCardComponent.vue')
 )
+const userStore = useUserStore()
 </script>
 
 <template>
@@ -18,7 +20,8 @@ const MadeWithCard = defineAsyncComponent(() =>
             <div class="row justify-content-center h-100">
               <div class="col-12 d-flex flex-column justify-content-center">
                 <h1 class="fs-title-custom fw-bold">
-                  Velkommen,<br />mit navn er <span class="name">Oliver</span>
+                  Velkommen<span v-if="userStore.user?.displayName">{{ ' ' + userStore.user?.displayName
+                    }}</span>,<br />mit navn er <span class="name">Oliver</span>
                 </h1>
                 <TypewriterText text-class="fs-typewriter-custom fw-bold" :display-text-array="[
                   'Jeg er Datamatiker.',

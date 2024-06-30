@@ -3,7 +3,7 @@
 <template>
   <footer class="mt-auto py-3 bg-body-tertiary shadow-top">
     <div class="container">
-      <div class="d-flex justify-content-between">
+      <div class="d-flex flex-wrap justify-content-between align-items-center border-top">
         <span class="text-body-secondary">© 2024 Oliver Bresson. All rights reserved.</span>
         <div class="d-flex gap-2">
           <a class="icon-link fs-4" href="https://www.linkedin.com/in/oliver-bresson-277788138/" target="_blank"

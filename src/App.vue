@@ -22,7 +22,7 @@ const FooterComponent = defineAsyncComponent(() =>
 
 <style scoped>
 .container {
-  min-height: calc(100% - 7.3rem);
+  min-height: calc(100% - 7.375rem);
   margin-top: 3.8125rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
