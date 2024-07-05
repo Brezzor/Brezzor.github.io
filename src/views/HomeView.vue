@@ -48,7 +48,7 @@ const userStore = useUserStore()
         <div class="text-center">
           <h2>Lavet med:</h2>
         </div>
-        <div class="row g-sm-4 pt-4 justify-content-center">
+        <div class="row g-3 pt-4 justify-content-center">
           <div class="col-lg-3 col-md-12">
             <MadeWithCard class="made-with" link-url="https://vuejs.org/" name-of-text="Vue.js">
               <img class="logo" src="../assets/vue-logo.svg" alt="vue logo" height="100%" width="100%">

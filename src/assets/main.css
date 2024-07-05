@@ -14,11 +14,13 @@
   --body-font-size: 500;
   --body-font-style: normal;
 
+  --bg-image-height: 100%;
   --bg-image-url-light: url('./doted-paper-light.webp');
   --bg-image-url-dark: url('./doted-paper-dark.webp');
   --bg-image-repeat: no-repeat;
   --bg-image-size: cover;
   --bg-image-pos: center;
+  --bg-image-att: fixed;
 }
 
 .linkedin-color {
@@ -46,7 +48,6 @@
 
 html,
 body {
-  height: 100%;
   font-display: var(--font-diplay);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
@@ -54,19 +55,27 @@ body {
 }
 
 *[data-bs-theme='light'] .bg {
-  height: 100%;
+  height: var(--bg-image-height);
   background-image: var(--bg-image-url-light);
   background-repeat: var(--bg-image-repeat);
   background-size: var(--bg-image-size);
+  -moz-background-size: var(--bg-image-size);
+  -webkit-background-size: var(--bg-image-size);
+  -o-background-size: var(--bg-image-size);
   background-position: var(--bg-image-pos);
+  background-attachment: var(--bg-image-att);
 }
 
 *[data-bs-theme='dark'] .bg {
-  height: 100%;
+  height: var(--bg-image-height);
   background-image: var(--bg-image-url-dark);
   background-repeat: var(--bg-image-repeat);
   background-size: var(--bg-image-size);
+  -moz-background-size: var(--bg-image-size);
+  -webkit-background-size: var(--bg-image-size);
+  -o-background-size: var(--bg-image-size);
   background-position: var(--bg-image-pos);
+  background-attachment: var(--bg-image-att);
 }
 
 #app {
