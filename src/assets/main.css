@@ -14,9 +14,11 @@
   --body-font-size: 500;
   --body-font-style: normal;
 
-  --bg-image-url: url('./doted-paper.webp');
-  --bg-image-repeat: repeat;
-  --bg-image-size: auto;
+  --bg-image-url-light: url('./doted-paper-light.webp');
+  --bg-image-url-dark: url('./doted-paper-dark.webp');
+  --bg-image-repeat: no-repeat;
+  --bg-image-size: cover;
+  --bg-image-pos: center;
 }
 
 .linkedin-color {
@@ -42,14 +44,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html,
 body {
   height: 100%;
@@ -59,16 +53,28 @@ body {
   font-style: var(--body-font-style);
 }
 
-#app {
+*[data-bs-theme='light'] .bg {
   height: 100%;
+  background-image: var(--bg-image-url-light);
+  background-repeat: var(--bg-image-repeat);
+  background-size: var(--bg-image-size);
+  background-position: var(--bg-image-pos);
+}
+
+*[data-bs-theme='dark'] .bg {
+  height: 100%;
+  background-image: var(--bg-image-url-dark);
+  background-repeat: var(--bg-image-repeat);
+  background-size: var(--bg-image-size);
+  background-position: var(--bg-image-pos);
+}
+
+#app {
   overflow-x: hidden;
   font-display: var(--font-diplay);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   font-style: var(--body-font-style);
-  background-image: var(--bg-image-url);
-  background-repeat: var(--bg-image-repeat);
-  background-size: var(--bg-image-size);
 }
 
 .name {
@@ -80,6 +86,13 @@ body {
   max-width: 265px;
   max-height: 265px;
   filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
+}
+
+.fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 4rem;
+  z-index: 1030;
 }
 
 .navbar-brand .logo,
@@ -100,7 +113,12 @@ body {
 
 .made-with:hover .card,
 .made-with:focus .card {
-  transform: rotate(-2deg) scale(1.05);
+  transform: rotate(-3deg) scale(1.05);
+}
+
+.made-with-reverse:hover .card,
+.made-with-reverse:focus .card {
+  transform: rotate(3deg) scale(1.05);
 }
 
 @keyframes shake {

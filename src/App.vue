@@ -7,25 +7,53 @@ const HeaderComponent = defineAsyncComponent(() =>
 const FooterComponent = defineAsyncComponent(() =>
   import('./components/FooterComponent.vue')
 )
+const ThemeSwitch = defineAsyncComponent(() =>
+  import('./components/ThemeSwitchComponent.vue')
+)
 </script>
 
 
 <template>
   <HeaderComponent />
-  <RouterView v-slot="{ Component, route }">
+  <RouterView v-slot="{ Component, route }" class="container">
     <transition name="scale-slide">
       <component :is="Component" :key="route.path" />
     </transition>
   </RouterView>
+  <div class="fab">
+    <div class="dropup">
+      <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-three-dots"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <div class="dropdown-item-text">
+            <ThemeSwitch></ThemeSwitch>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
   <FooterComponent />
 </template>
 
 <style scoped>
 .container {
-  min-height: calc(100% - 7.375rem);
-  margin-top: 3.8125rem;
+  min-height: calc(100vh - 57px - 58px);
+  margin-top: 58px;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  border-top: 0;
+  border-right: .3em solid transparent;
+  border-bottom: .3em solid;
+  border-left: .3em solid transparent
 }
 
 /* scale-slide animation */

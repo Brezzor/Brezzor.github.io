@@ -9,9 +9,9 @@ defineProps({
 <template>
   <a :class="linkColor || 'link-dark'" :href="linkUrl" target="_blank">
     <div class="card">
-      <div class="card body p-4">
+      <div class="card-body p-4">
         <div class="d-flex flex-column justify-content-center align-items-center h-100">
-          <slot />
+          <slot></slot>
           <span>{{ nameOfText }}</span>
         </div>
       </div>
@@ -19,5 +19,4 @@ defineProps({
   </a>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

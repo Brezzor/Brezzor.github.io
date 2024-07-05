@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { getAuth, onAuthStateChanged, type User } from 'firebase/auth'
+import { useAuthStore } from '@/stores/AuthStore'
 
 const router = createRouter({
   linkActiveClass: 'active',
@@ -76,30 +76,9 @@ const router = createRouter({
   ]
 })
 
-const getCurrentUser = () => {
-  return new Promise<User | null>((resolve, reject) => {
-    const removeListener = onAuthStateChanged(
-      getAuth(),
-      (user) => {
-        removeListener()
-        resolve(user)
-      },
-      reject
-    )
-  })
-}
-
-router.beforeEach(async (to, from, next) => {
-  if (to.matched.some((record) => record.meta.requiresAuth)) {
-    if (await getCurrentUser()) {
-      next()
-    } else {
-      alert('Acces denied! You have to login.')
-      next({ name: 'Login' })
-    }
-  } else {
-    next()
-  }
+router.beforeEach((to) => {
+  const authStore = useAuthStore()
+  if (to.meta.requiresAuth && !authStore.isLoggedIn) return { name: 'Login' }
 })
 
 export default router

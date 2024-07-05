@@ -50,27 +50,24 @@ const userStore = useUserStore()
         </div>
         <div class="row g-sm-4 pt-4 justify-content-center">
           <div class="col-lg-3 col-md-12">
-            <MadeWithCard :class="'made-with'" link-url="https://vuejs.org/" name-of-text="Vue.js">
+            <MadeWithCard class="made-with" link-url="https://vuejs.org/" name-of-text="Vue.js">
               <img class="logo" src="../assets/vue-logo.svg" alt="vue logo" height="100%" width="100%">
             </MadeWithCard>
           </div>
-          <div class="col-lg-1 col-md-12">
-            <div class="d-flex flex-column justify-content-center align-items-center h-100">
-              <i class="bi bi-plus fs-1"></i>
-            </div>
+          <div class="col-lg-3 col-md-12">
+            <MadeWithCard class="made-with made-with-reverse" link-url="https://firebase.google.com/"
+              name-of-text="Firebase">
+              <img class="logo" src="../assets/firebase-logo.svg" alt="bootstrap 5 logo" height="100%" width="100%">
+            </MadeWithCard>
           </div>
           <div class="col-lg-3 col-md-12">
-            <MadeWithCard :class="'made-with'" link-url="https://vitejs.dev/" name-of-text="Vite.js">
+            <MadeWithCard class="made-with" link-url="https://vitejs.dev/" name-of-text="Vite.js">
               <img class="logo" src="../assets/vite-logo.svg" alt="vite logo" height="100%" width="100%">
             </MadeWithCard>
           </div>
-          <div class="col-lg-1 col-md-12">
-            <div class="d-flex flex-column justify-content-center align-items-center h-100">
-              <i class="bi bi-plus fs-1"></i>
-            </div>
-          </div>
           <div class="col-lg-3 col-md-12">
-            <MadeWithCard :class="'made-with'" link-url="https://getbootstrap.com/" name-of-text="Bootstrap 5">
+            <MadeWithCard class="made-with made-with-reverse" link-url="https://getbootstrap.com/"
+              name-of-text="Bootstrap 5">
               <img class="logo" src="../assets/bootstrap-logo.svg" alt="bootstrap 5 logo" height="100%" width="100%">
             </MadeWithCard>
           </div>

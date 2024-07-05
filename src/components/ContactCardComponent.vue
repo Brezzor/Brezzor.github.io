@@ -37,12 +37,3 @@ defineProps({
 </template>
 
 <style scoped></style>
-template>
-
-<style scoped></style>
-emplate>
-
-<style scoped></style>
-mplate>
-
-<style scoped></style>
