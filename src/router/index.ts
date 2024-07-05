@@ -1,5 +1,5 @@
+import { useUserStore } from '@/stores/UserStore'
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { useAuthStore } from '@/stores/AuthStore'
 
 const router = createRouter({
   linkActiveClass: 'active',
@@ -76,9 +76,17 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to) => {
-  const authStore = useAuthStore()
-  if (to.meta.requiresAuth && !authStore.isLoggedIn) return { name: 'Login' }
+router.beforeEach(async (to, from, next) => {
+  const userStore = useUserStore()
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (await userStore.getCurrentUser()) {
+      next()
+    } else {
+      next({ name: 'Login' })
+    }
+  } else {
+    next()
+  }
 })
 
 export default router

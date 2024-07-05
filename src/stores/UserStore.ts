@@ -17,12 +17,26 @@ export const useUserStore = defineStore('userStore', () => {
     }
   }
 
+  const getCurrentUser = async () => {
+    return new Promise<User | null>((resolve, reject) => {
+      const removeListener = onAuthStateChanged(
+        getAuth(),
+        (user) => {
+          removeListener()
+          resolve(user)
+        },
+        reject
+      )
+    })
+  }
+
   onAuthStateChanged(auth, (currentUser) => {
     user.value = currentUser
   })
 
   return {
     user,
-    updateDisplayname
+    updateDisplayname,
+    getCurrentUser
   }
 })
