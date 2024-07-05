@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '~bootstrap': fileURLToPath(new URL('node_modules/bootstrap', import.meta.url))
+        '~bootstrap': fileURLToPath(new URL('./node_modules/bootstrap', import.meta.url))
       }
     },
     define: {

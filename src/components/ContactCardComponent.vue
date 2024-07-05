@@ -27,7 +27,7 @@ defineProps({
     <div class="card-body">
       <div class="row">
         <div class="col pt-2">
-          <a class="link-dark" :class="urlColor" :href="contactUrl" target="_blank">{{
+          <a class="link-body-emphasis" :class="urlColor" :href="contactUrl" target="_blank">{{
             contactUrlText
           }}</a>
         </div>

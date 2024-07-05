@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root {
-  --linkedin-color: #0a66c2;
-  --facebook-color: #0866ff;
-  --github-color: #1f2328;
-  --instagram-color: circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%,
+  --linkedin-color-light: #0a66c2;
+  --linkedin-color-dark: #ffffff;
+  --facebook-color-light: #0866ff;
+  --facebook-color-dark: #ffffff;
+  --github-color-light: #1f2328;
+  --github-color-dark: #ffffff;
+  --instagram-color-light: circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%,
     #285aeb 90%;
+  --instagram-color-dark: #ffffff;
 
-  --primary-color: #0d6efd;
+  --primary-color: var(--bs-primary);
 
   --font-diplay: optional;
   --body-font-family: 'Fira Code', monospace;
@@ -23,27 +27,43 @@
   --bg-image-att: fixed;
 }
 
-.linkedin-color {
-  color: var(--linkedin-color);
+*[data-bs-theme='light'] .linkedin-color {
+  color: var(--linkedin-color-light);
 }
 
-.facebook-color {
-  color: var(--facebook-color);
+*[data-bs-theme='dark'] .linkedin-color {
+  color: var(--linkedin-color-dark);
 }
 
-.github-color {
-  color: var(--github-color);
+*[data-bs-theme='light'] .facebook-color {
+  color: var(--facebook-color-light);
 }
 
-.insta-color {
-  color: var(--instagram-color);
-  background: -moz-radial-gradient(var(--instagram-color));
-  background: -webkit-radial-gradient(var(--instagram-color));
-  background: radial-gradient(var(--instagram-color));
+*[data-bs-theme='dark'] .facebook-color {
+  color: var(--facebook-color-dark);
+}
+
+*[data-bs-theme='light'] .github-color {
+  color: var(--github-color-light);
+}
+
+*[data-bs-theme='dark'] .github-color {
+  color: var(--github-color-dark);
+}
+
+*[data-bs-theme='light'] .insta-color {
+  color: var(--instagram-color-light);
+  background: -moz-radial-gradient(var(--instagram-color-light));
+  background: -webkit-radial-gradient(var(--instagram-color-light));
+  background: radial-gradient(var(--instagram-color-light));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+*[data-bs-theme='dark'] .insta-color {
+  color: var(--instagram-color-dark);
 }
 
 html,

@@ -8,14 +8,14 @@
         <div class="d-flex gap-2">
           <a class="icon-link fs-4" href="https://www.linkedin.com/in/oliver-bresson-277788138/" target="_blank"
             aria-label="linkedin link">
-            <i class="bi bi-linkedin" style="color: var(--linkedin-color)"></i>
+            <i class="bi bi-linkedin linkedin-color"></i>
           </a>
           <a class="icon-link fs-4" href="https://www.facebook.com/OliverBresson" target="_blank"
             aria-label="facebook link">
-            <i class="bi bi-facebook" style="color: var(--facebook-color)"></i>
+            <i class="bi bi-facebook facebook-color"></i>
           </a>
           <a class="icon-link fs-4" href="https://github.com/Brezzor" target="_blank" aria-label="github link">
-            <i class="bi bi-github" style="color: var(--github-color)"></i>
+            <i class="bi bi-github github-color"></i>
           </a>
         </div>
       </div>
