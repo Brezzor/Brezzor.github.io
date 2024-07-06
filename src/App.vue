@@ -15,7 +15,7 @@ const fab = defineAsyncComponent(() =>
 
 <template>
   <HeaderComponent />
-  <RouterView v-slot="{ Component, route }" class="container">
+  <RouterView v-slot="{ Component, route }">
     <transition name="scale-slide">
       <component :is="Component" :key="route.path" />
     </transition>
@@ -26,18 +26,16 @@ const fab = defineAsyncComponent(() =>
 
 <style scoped>
 .container {
-  min-height: 100%;
   margin-top: 6rem;
   margin-bottom: 7rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .container {
     margin-top: 5rem;
     margin-bottom: 5rem;
   }
 }
-
 
 /* scale-slide animation */
 .scale-slide-leave-active,

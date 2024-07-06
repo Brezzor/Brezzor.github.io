@@ -68,6 +68,14 @@
 
 html,
 body {
+  overflow-y: hidden;
+}
+
+html,
+body,
+#app {
+  height: 100vh;
+  overflow-x: hidden;
   font-display: var(--body-font-display);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
@@ -96,14 +104,6 @@ body {
   -o-background-size: var(--bg-image-size);
   background-position: var(--bg-image-pos);
   background-attachment: var(--bg-image-att);
-}
-
-#app {
-  overflow-x: hidden;
-  font-display: var(--body-font-display);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  font-style: var(--body-font-style);
 }
 
 .name {
