@@ -13,7 +13,7 @@
 
   --primary-color: var(--bs-primary);
 
-  --font-diplay: optional;
+  --body-font-display: optional;
   --body-font-family: 'Fira Code', monospace;
   --body-font-size: 500;
   --body-font-style: normal;
@@ -21,8 +21,8 @@
   --bg-image-height: 100%;
   --bg-image-url-light: url('./doted-paper-light.webp');
   --bg-image-url-dark: url('./doted-paper-dark.webp');
-  --bg-image-repeat: no-repeat;
-  --bg-image-size: cover;
+  --bg-image-repeat: repeat;
+  --bg-image-size: stretch;
   --bg-image-pos: center;
   --bg-image-att: fixed;
 }
@@ -68,7 +68,7 @@
 
 html,
 body {
-  font-display: var(--font-diplay);
+  font-display: var(--body-font-display);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   font-style: var(--body-font-style);
@@ -100,7 +100,7 @@ body {
 
 #app {
   overflow-x: hidden;
-  font-display: var(--font-diplay);
+  font-display: var(--body-font-display);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   font-style: var(--body-font-style);
@@ -115,13 +115,6 @@ body {
   max-width: 265px;
   max-height: 265px;
   filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.5));
-}
-
-.fab {
-  position: fixed;
-  right: 1rem;
-  bottom: 4rem;
-  z-index: 1030;
 }
 
 .navbar-brand .logo,

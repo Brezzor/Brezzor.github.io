@@ -9,11 +9,9 @@ export const useUserStore = defineStore('userStore', () => {
 
   const updateDisplayname = async (displayName: string) => {
     if (user.value !== null) {
-      await updateProfile(user?.value, { displayName: displayName })
-        .then(() => {})
-        .catch((error) => {
-          console.log(error.message)
-        })
+      await updateProfile(user?.value, { displayName: displayName }).catch((error) => {
+        console.log(error.message)
+      })
     }
   }
 

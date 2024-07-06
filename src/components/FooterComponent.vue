@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer class="mt-auto py-3 bg-body-tertiary shadow-top">
+  <footer class="mt-auto py-3 bg-body-tertiary fixed-bottom shadow-top">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center border-top">
         <span class="text-body-secondary">© 2024 Oliver Bresson. All rights reserved.</span>

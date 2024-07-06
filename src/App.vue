@@ -7,8 +7,8 @@ const HeaderComponent = defineAsyncComponent(() =>
 const FooterComponent = defineAsyncComponent(() =>
   import('./components/FooterComponent.vue')
 )
-const ThemeSwitch = defineAsyncComponent(() =>
-  import('./components/ThemeSwitchComponent.vue')
+const fab = defineAsyncComponent(() =>
+  import('@/components/FloatingActionButton.vue')
 )
 </script>
 
@@ -20,46 +20,28 @@ const ThemeSwitch = defineAsyncComponent(() =>
       <component :is="Component" :key="route.path" />
     </transition>
   </RouterView>
-  <div class="fab">
-    <div class="dropup">
-      <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="bi bi-three-dots"></i>
-      </button>
-      <ul class="dropdown-menu">
-        <li>
-          <div class="dropdown-item-text">
-            <ThemeSwitch></ThemeSwitch>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-  </div>
+  <fab />
   <FooterComponent />
 </template>
 
 <style scoped>
 .container {
-  min-height: calc(100vh - 57px - 58px);
-  margin-top: 58px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  min-height: 100%;
+  margin-top: 6rem;
+  margin-bottom: 7rem;
 }
 
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: .255em;
-  vertical-align: .255em;
-  border-top: 0;
-  border-right: .3em solid transparent;
-  border-bottom: .3em solid;
-  border-left: .3em solid transparent
+@media (min-width: 576px) {
+  .container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
 }
+
 
 /* scale-slide animation */
-
-.scale-slide-enter-active,
-.scale-slide-leave-active {
+.scale-slide-leave-active,
+.scale-slide-enter-active {
   position: absolute;
 }
 
@@ -76,25 +58,24 @@ const ThemeSwitch = defineAsyncComponent(() =>
 }
 
 .scale-slide-enter-from {
-  left: -200%;
+  left: -100%;
 }
 
 .scale-slide-enter-to {
   left: 0;
-  right: 0;
 }
 
 .scale-slide-leave-from {
-  left: 0;
-  right: 0;
   transform: scale(100%);
   opacity: 1;
+  left: 0;
+  right: 0;
 }
 
 .scale-slide-leave-to {
-  left: 0;
-  right: 0;
   transform: scale(50%);
   opacity: 0;
+  left: 0;
+  right: 0;
 }
 </style>
