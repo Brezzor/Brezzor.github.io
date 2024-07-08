@@ -1,0 +1,90 @@
+{
+  "Home": "Home",
+  "About": "About",
+  "Skills": "Skills",
+  "Works": "Works",
+  "Contact": "Contact",
+  "Profile": "Profile",
+  "Account": "Account",
+  "Feed": "Feed",
+  "Login": "Login",
+  "Register": "Register",
+  "Signout": "Signout",
+  "MadeWith": "Made with",
+  "Dark": "Dark",
+  "Light": "Light",
+  "Theme": "Theme",
+  "Language": "Language",
+  "Finished": "Finished",
+  "WorkingOn": "Working on page. Coming soon...",
+  "Mobile": "Mobile",
+  "Save": "Save",
+  "HomePage": {
+    "TitleParts": {
+      "First": "Welcome",
+      "Second": "my name is"
+    },
+    "Typewriter": {
+      "1": "I am a Computer scientist.",
+      "2": "I can code Frontend.",
+      "3": "I can code Backend.",
+      "4": "I can work with Databases."
+    }
+  },
+  "AboutPage": {
+    "Title": "Who am I",
+    "AboutMeParts": {
+      "First": "My name is",
+      "Second": "I am 26 years old and live in Roskilde. I have a big interest for programming and technology. I am a previously trained EUX electrician, specializing in BMS (Building Management System)"
+    },
+    "Interests": {
+      "Title": "Interests",
+      "1": "Family",
+      "2": "Friends",
+      "3": "Gaming",
+      "4": "Computer",
+      "5": "Programming",
+      "6": "Technology"
+    },
+    "Education": {
+      "Title": "Education",
+      "ComputerScience": "Computer science",
+      "Electrician": "EUX electrician"
+    },
+    "MyGoals": {
+      "Title": "My goals",
+      "Goals": "My goals are to expand my knowledge in programming and system development. As well as gaining experience in using what I have learned from my time on the Computer Science course at Zealand Roskilde"
+    }
+  },
+  "AccountPage": {
+    "Title": "Your account",
+    "Welcome": "Welcome to your account"
+  },
+  "FeedPage": {
+    "Title": "Your feed",
+    "Welcome": "Welcome to your feed"
+  },
+  "404Page": {
+    "Title": "Error: 404",
+    "UnderTitle": "Page could not be found",
+    "Message": "I'm sorry, the page you're looking for doesn't exist or couldn't be found. Go back to the home page or try searching for it again."
+  },
+  "RegisterPage": {
+    "Email": "Email address",
+    "Password": "Password",
+    "Remember": "Remember me",
+    "LoginMessage": {
+      "First": "Do you already have an account",
+      "Second": "Login here"
+    }
+  },
+  "LoginPage": {
+    "Email": "Email address",
+    "Password": "Password",
+    "Remember": "Remember me",
+    "RegisterMessage": {
+      "First": "Don't have an account",
+      "Second": "Register here"
+    }
+  }
+}

@@ -9,10 +9,10 @@ const TypewriterText = defineAsyncComponent(() =>
   <div class="container">
     <div class="card shadow">
       <div class="card-body">
-        <h1 class="text-center">Projekter</h1>
+        <h1 class="text-center">{{ $t('Works') }}</h1>
         <div class="container text-center pt-2">
           <TypewriterText text-class="fw-bold" :display-text-array="[
-            'Arbejder på siden. Den kommer snart...']" />
+            $t('WorkingOn')]" />
         </div>
       </div>
     </div>

@@ -4,9 +4,6 @@ import { RouterView } from 'vue-router'
 const HeaderComponent = defineAsyncComponent(() =>
   import('./components/HeaderComponent.vue')
 )
-const FooterComponent = defineAsyncComponent(() =>
-  import('./components/FooterComponent.vue')
-)
 const fab = defineAsyncComponent(() =>
   import('@/components/FloatingActionButton.vue')
 )
@@ -21,7 +18,6 @@ const fab = defineAsyncComponent(() =>
     </transition>
   </RouterView>
   <fab />
-  <FooterComponent />
 </template>
 
 <style scoped>

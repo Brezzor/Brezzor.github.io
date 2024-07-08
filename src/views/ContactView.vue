@@ -10,8 +10,8 @@ const ContactCard = defineAsyncComponent(() =>
     <div class="card shadow">
       <div class="card-body">
         <div class="container text-center">
-          <h1>Kontakt mig</h1>
-          <div class="row g-4">
+          <h1>{{ $t('Contact') }}</h1>
+          <div class="row g-4 mt-2">
             <div class="col-md-12 col-lg-5">
               <div class="d-flex justify-content-center align-items-center h-100 py-4 py-lg-0">
                 <img class="my-image floating" src="../assets/my-image.webp" alt="headshot" height="100%"
@@ -26,7 +26,7 @@ const ContactCard = defineAsyncComponent(() =>
                       contact-url="mailto:oliver.bresson@gmail.com" contact-url-text="oliver.bresson@gmail.com" />
                   </div>
                   <div class="col-xs-12 col-sm-6">
-                    <ContactCard icon-name="bi-phone-fill" contact-name="Mobil" contact-url="tel:22265056"
+                    <ContactCard icon-name="bi-phone-fill" :contact-name="$t('Mobile')" contact-url="tel:22265056"
                       contact-url-text="+45 22 26 50 56" />
                   </div>
                   <div class="col-xs-12 col-sm-6">

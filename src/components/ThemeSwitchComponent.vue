@@ -11,11 +11,11 @@ const themeStore = useThemeStore()
     <label class="form-check-label" for="themeSwitch">
       <div v-if="themeStore.mode">
         <i class="bi bi-sun-fill"></i>
-        <span class="ps-1">Lys</span>
+        <span class="ps-1">{{ $t('Light') }}</span>
       </div>
       <div v-else>
         <i class="bi bi-moon-stars-fill"></i>
-        <span class="ps-1">Mørk</span>
+        <span class="ps-1">{{ $t('Dark') }}</span>
       </div>
     </label>
   </div>

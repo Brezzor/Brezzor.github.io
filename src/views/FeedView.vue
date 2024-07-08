@@ -11,12 +11,12 @@ const userStore = useUserStore()
     <div class="container">
         <div class="card shadow">
             <div class="card-body">
-                <h1 class="text-center">Feed</h1>
+                <h1 class="text-center">{{ $t('FeedPage.Title') }}</h1>
                 <div class="container text-center pt-2">
-                    <span>Velkommen til dit feed, <span class="name">{{ userStore.user?.email
+                    <span>{{ $t('FeedPage.Welcome') }}, <span class="name">{{ userStore.user?.email
                             }}</span></span>
                     <TypewriterText text-class="" :display-text-array="[
-                        'Arbejder på siden. Den kommer snart mere...']" />
+                        $t('WorkingOn')]" />
                 </div>
             </div>
         </div>

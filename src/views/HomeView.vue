@@ -20,17 +20,18 @@ const userStore = useUserStore()
             <div class="row justify-content-center h-100">
               <div class="col-12 d-flex flex-column justify-content-center">
                 <h1 class="fs-title-custom fw-bold">
-                  Velkommen<span v-if="userStore.user?.displayName">{{ ' ' + userStore.user?.displayName
-                    }}</span>,<br />mit navn er <span class="name">Oliver</span>
+                  {{ $t('HomePage.TitleParts.First') }}<span v-if="userStore.user?.displayName">{{ ' ' +
+                    userStore.user?.displayName
+                    }}</span>,<br />{{ $t('HomePage.TitleParts.Second') }} <span class="name">Oliver</span>
                 </h1>
                 <TypewriterText text-class="fs-typewriter-custom fw-bold" :display-text-array="[
-                  'Jeg er Datamatiker.',
-                  'Jeg kan kode Frontend.',
-                  'Jeg kan kode Backend.',
-                  'Jeg kan arbejde med Databaser.']" />
+                  $t('HomePage.Typewriter.1'),
+                  $t('HomePage.Typewriter.2'),
+                  $t('HomePage.Typewriter.3'),
+                  $t('HomePage.Typewriter.4')]" />
               </div>
               <div class="col-12 d-flex justify-content-center align-items-center">
-                <RouterLink class="btn btn-primary" to="/contact">Kontakt</RouterLink>
+                <RouterLink class="btn btn-primary" to="/contact">{{ $t('Contact') }}</RouterLink>
               </div>
             </div>
           </div>
@@ -46,7 +47,7 @@ const userStore = useUserStore()
     <div class="card shadow mt-4">
       <div class="card-body">
         <div class="text-center">
-          <h2>Lavet med:</h2>
+          <h2>{{ $t('MadeWith') }}:</h2>
         </div>
         <div class="row g-3 pt-4 justify-content-center">
           <div class="col-lg-3 col-md-12">

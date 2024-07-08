@@ -20,15 +20,16 @@ const signOut = () => {
                     <i class="bi bi-person-circle"></i>
                     <img class="rounded-circle" :src="userStore.user?.photoURL" alt="profile picture" height="30"
                         width="30" v-if="userStore.user?.photoURL">
-                    <span class="ms-2" v-else>Profil</span>
+                    <span class="ms-2" v-else>{{ $t('Profile') }}</span>
                 </button>
                 <ul class="dropdown-menu position-absolute">
                     <li>
                         <RouterLink class="dropdown-item" :to="{ name: 'Account' }" v-on:click="navStore.closeNavbar">
-                            Konto</RouterLink>
+                            {{ $t('Account') }}</RouterLink>
                     </li>
                     <li>
-                        <RouterLink class="dropdown-item" :to="{ name: 'Feed' }" v-on:click="navStore.closeNavbar">Feed
+                        <RouterLink class="dropdown-item" :to="{ name: 'Feed' }" v-on:click="navStore.closeNavbar">
+                            {{ $t('Feed') }}
                         </RouterLink>
                     </li>
                     <li>
@@ -36,7 +37,7 @@ const signOut = () => {
                     </li>
                     <li>
                         <div class="dropdown-item-text">
-                            <button class="btn btn-outline-danger" v-on:click="signOut">Signout</button>
+                            <button class="btn btn-outline-danger" v-on:click="signOut">{{ $t('Signout') }}</button>
                         </div>
                     </li>
                 </ul>

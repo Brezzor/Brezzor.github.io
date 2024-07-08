@@ -61,72 +61,141 @@ function eraseText() {
 
 <style lang="scss" scoped>
 // Cursor blinking CSS Starts...
-.blinking-cursor {
-  color: #2c3e50;
+*[data-bs-theme='light'] .blinking-cursor {
+  color: #212529;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
   -o-animation: 1s blink step-end infinite;
   animation: 1s blink step-end infinite;
+
+  @keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-moz-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-webkit-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-ms-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #2c3e50;
+    }
+  }
+
+  @-o-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #2c3e50;
+    }
+  }
 }
 
-@keyframes blink {
+*[data-bs-theme='dark'] .blinking-cursor {
+  color: #dee2e6;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
 
-  from,
-  to {
-    color: transparent;
+  @keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #dee2e6;
+    }
   }
 
-  50% {
-    color: #2c3e50;
-  }
-}
+  @-moz-keyframes blink {
 
-@-moz-keyframes blink {
+    from,
+    to {
+      color: transparent;
+    }
 
-  from,
-  to {
-    color: transparent;
-  }
-
-  50% {
-    color: #2c3e50;
-  }
-}
-
-@-webkit-keyframes blink {
-
-  from,
-  to {
-    color: transparent;
+    50% {
+      color: #dee2e6;
+    }
   }
 
-  50% {
-    color: #2c3e50;
-  }
-}
+  @-webkit-keyframes blink {
 
-@-ms-keyframes blink {
+    from,
+    to {
+      color: transparent;
+    }
 
-  from,
-  to {
-    color: transparent;
-  }
-
-  50% {
-    color: #2c3e50;
-  }
-}
-
-@-o-keyframes blink {
-
-  from,
-  to {
-    color: transparent;
+    50% {
+      color: #dee2e6;
+    }
   }
 
-  50% {
-    color: #2c3e50;
+  @-ms-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #dee2e6;
+    }
+  }
+
+  @-o-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: #dee2e6;
+    }
   }
 }
 </style>

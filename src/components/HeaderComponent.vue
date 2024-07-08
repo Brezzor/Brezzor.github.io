@@ -27,44 +27,46 @@ const accountDropdown = defineAsyncComponent(() =>
             <RouterLink class="nav-link ps-1 ps-xl-0" :to="{ name: 'Home' }" v-on:click="navStore.closeNavbar">
               <i class="bi bi-house-fill"></i>
               <span class="px-1">-</span>
-              <span>Hjem</span>
+              <span>{{ $t('Home') }}</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link ps-1 ps-xl-0" :to="{ name: 'About' }" v-on:click="navStore.closeNavbar">
               <i class="bi bi-info-circle-fill"></i>
               <span class="px-1">-</span>
-              <span>Om mig</span>
+              <span>{{ $t('About') }}</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link ps-1 ps-xl-0" :to="{ name: 'Skills' }" v-on:click="navStore.closeNavbar">
               <i class="bi bi-tools"></i>
               <span class="px-1">-</span>
-              <span>Færdigheder</span>
+              <span>{{ $t('Skills') }}</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link ps-1 ps-xl-0" :to="{ name: 'Works' }" v-on:click="navStore.closeNavbar">
               <i class="bi bi-code-slash"></i>
               <span class="px-1">-</span>
-              <span>Projekter</span>
+              <span>{{ $t('Works') }}</span>
             </RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link ps-1 ps-xl-0" :to="{ name: 'Contact' }" v-on:click="navStore.closeNavbar">
               <i class="bi bi-person-lines-fill"></i>
               <span class="px-1">-</span>
-              <span>Kontakt</span>
+              <span>{{ $t('Contact') }}</span>
             </RouterLink>
           </li>
         </ul>
         <div class="pt-2 pt-xl-0" v-if="!authStore.loadingSession && !authStore.loadingSession">
           <div v-if="!authStore.isLoggedIn">
-            <RouterLink class=" btn btn-outline-primary me-2" :to="{ name: 'Login' }" v-on:click="navStore.closeNavbar">
-              Login</RouterLink>
-            <RouterLink class="btn btn-primary" :to="{ name: 'Register' }" v-on:click="navStore.closeNavbar">
-              register</RouterLink>
+            <RouterLink class=" btn btn-outline-primary me-2" :to="{ name: 'Login' }" v-on:click="navStore.closeNavbar"
+              active-class="">
+              {{ $t('Login') }}</RouterLink>
+            <RouterLink class="btn btn-primary" :to="{ name: 'Register' }" v-on:click="navStore.closeNavbar"
+              active-class="">
+              {{ $t('Register') }}</RouterLink>
 
           </div>
           <accountDropdown v-else />
