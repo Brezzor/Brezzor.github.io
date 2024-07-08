@@ -67,11 +67,6 @@
 }
 
 html,
-body {
-  overflow-y: hidden;
-}
-
-html,
 body,
 #app {
   height: 100vh;
