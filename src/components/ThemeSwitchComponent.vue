@@ -1,13 +1,19 @@
 <script setup lang="ts">
-import { useThemeStore } from '@/stores/ThemeStore';
+import { useThemeStore } from '@/stores/ThemeStore'
 
 const themeStore = useThemeStore()
 </script>
 
 <template>
   <div class="form-check form-switch">
-    <input class="form-check-input" v-model="themeStore.mode" type="checkbox" name="themeSwitch" id="themeSwitch"
-      role="themeSwitch">
+    <input
+      class="form-check-input"
+      v-model="themeStore.mode"
+      type="checkbox"
+      name="themeSwitch"
+      id="themeSwitch"
+      role="themeSwitch"
+    />
     <label class="form-check-label" for="themeSwitch">
       <div v-if="themeStore.mode">
         <i class="bi bi-sun-fill"></i>

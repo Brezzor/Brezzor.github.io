@@ -11,7 +11,8 @@
               <div class="card">
                 <div class="card-body">
                   <p>
-                    {{ $t('AboutPage.AboutMeParts.First') }} <span class="name">Oliver Bresson</span>,
+                    {{ $t('AboutPage.AboutMeParts.First') }}
+                    <span class="name">Oliver Bresson</span>,
                     {{ $t('AboutPage.AboutMeParts.Second') }}.
                   </p>
                 </div>
@@ -59,21 +60,33 @@
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                           <div class="row g-2 g-sm-0">
-                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start">
+                            <div
+                              class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start"
+                            >
                               <span>{{ $t('AboutPage.Education.ComputerScience') }}</span>
                             </div>
-                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
-                              <span class="badge text-bg-primary rounded-pill">{{ $t('Finished') }} 2024</span>
+                            <div
+                              class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end"
+                            >
+                              <span class="badge text-bg-primary rounded-pill"
+                                >{{ $t('Finished') }} 2024</span
+                              >
                             </div>
                           </div>
                         </li>
                         <li class="list-group-item">
                           <div class="row g-2 g-sm-0">
-                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start">
+                            <div
+                              class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start"
+                            >
                               <span>{{ $t('AboutPage.Education.Electrician') }}</span>
                             </div>
-                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
-                              <span class="badge text-bg-primary rounded-pill">{{ $t('Finished') }} 2020</span>
+                            <div
+                              class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end"
+                            >
+                              <span class="badge text-bg-primary rounded-pill"
+                                >{{ $t('Finished') }} 2020</span
+                              >
                             </div>
                           </div>
                         </li>

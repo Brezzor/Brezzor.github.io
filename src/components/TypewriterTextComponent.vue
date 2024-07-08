@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue'
 
 const props = defineProps({
   displayTextArray: { type: Array<String>, required: true },
   textClass: { type: String, required: true },
   typingSpeed: { type: Number, default: 100 },
   erasingSpeed: { type: Number, default: 100 },
-  newTextDelay: { type: Number, default: 2000 },
+  newTextDelay: { type: Number, default: 2000 }
 })
 
 const refs = ref({
@@ -23,7 +23,9 @@ onMounted(() => {
 function typeText() {
   if (refs.value.charIndex < props.displayTextArray[refs.value.displayTextArrayIndex].length) {
     if (!refs.value.typeStatus) refs.value.typeStatus = true
-    refs.value.typeValue += props.displayTextArray[refs.value.displayTextArrayIndex].charAt(refs.value.charIndex)
+    refs.value.typeValue += props.displayTextArray[refs.value.displayTextArrayIndex].charAt(
+      refs.value.charIndex
+    )
     refs.value.charIndex += 1
     setTimeout(typeText, props.typingSpeed)
   } else {
@@ -70,7 +72,6 @@ function eraseText() {
   animation: 1s blink step-end infinite;
 
   @keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -82,7 +83,6 @@ function eraseText() {
   }
 
   @-moz-keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -94,7 +94,6 @@ function eraseText() {
   }
 
   @-webkit-keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -106,7 +105,6 @@ function eraseText() {
   }
 
   @-ms-keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -118,7 +116,6 @@ function eraseText() {
   }
 
   @-o-keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -139,7 +136,6 @@ function eraseText() {
   animation: 1s blink step-end infinite;
 
   @keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -151,7 +147,6 @@ function eraseText() {
   }
 
   @-moz-keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -163,7 +158,6 @@ function eraseText() {
   }
 
   @-webkit-keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -175,7 +169,6 @@ function eraseText() {
   }
 
   @-ms-keyframes blink {
-
     from,
     to {
       color: transparent;
@@ -187,7 +180,6 @@ function eraseText() {
   }
 
   @-o-keyframes blink {
-
     from,
     to {
       color: transparent;

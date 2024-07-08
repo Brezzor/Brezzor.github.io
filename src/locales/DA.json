@@ -19,6 +19,14 @@
   "WorkingOn": "Arbejder på siden. Den kommer snart...",
   "Mobile": "Mobil",
   "Save": "Gem",
+  "UsedFor": "Brugt",
+  "Years": "År",
+  "Year": "År",
+  "Months": "Måneder",
+  "Month": "Måned",
+  "Beginner": "Begynder",
+  "Intermediate": "Mellemniveau",
+  "Advanced": "Avanceret",
   "HomePage": {
     "TitleParts": {
       "First": "Velkommen",

@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue';
+import { defineAsyncComponent } from 'vue'
 import { RouterView } from 'vue-router'
-const HeaderComponent = defineAsyncComponent(() =>
-  import('./components/HeaderComponent.vue')
-)
-const fab = defineAsyncComponent(() =>
-  import('@/components/FloatingActionButton.vue')
-)
+const HeaderComponent = defineAsyncComponent(() => import('./components/HeaderComponent.vue'))
+const fab = defineAsyncComponent(() => import('@/components/FloatingActionButton.vue'))
 </script>
-
 
 <template>
   <HeaderComponent />

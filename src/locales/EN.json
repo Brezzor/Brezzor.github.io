@@ -19,6 +19,14 @@
   "WorkingOn": "Working on page. Coming soon...",
   "Mobile": "Mobile",
   "Save": "Save",
+  "UsedFor": "User for",
+  "Years": "Years",
+  "Year": "Year",
+  "Months": "Months",
+  "Month": "Month",
+  "Beginner": "Beginner",
+  "Intermediate": "Intermediate",
+  "Advanced": "Advanced",
   "HomePage": {
     "TitleParts": {
       "First": "Welcome",
