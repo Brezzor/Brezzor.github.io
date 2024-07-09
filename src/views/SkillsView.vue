@@ -12,7 +12,7 @@ const SkillCard = defineAsyncComponent(
         <h1 class="text-center">{{ $t('Skills') }}</h1>
         <h2>Frontend:</h2>
         <div class="row g-4 mb-2">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="Html" :-bar-value="100" :-skill-level="$t('Advanced')"
             -bar-color="#f06529"
             :-years-spent="3"
@@ -22,7 +22,7 @@ const SkillCard = defineAsyncComponent(
               </template>
             </SkillCard>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="JavaScript" :-bar-value="75" :-skill-level="$t('Intermediate')+'/'+$t('Advanced')"
             -bar-color="#f0db4f"
             :-years-spent="3"
@@ -33,7 +33,7 @@ const SkillCard = defineAsyncComponent(
               </template>
             </SkillCard>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="CSS" :-bar-value="75" :-skill-level="$t('Intermediate')+'/'+$t('Advanced')"
             -bar-color="#2965f1"
             :-years-spent="3"
@@ -43,7 +43,7 @@ const SkillCard = defineAsyncComponent(
               </template>
             </SkillCard>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="Vue.js" :-bar-value="50" :-skill-level="$t('Intermediate')"
             -bar-color="#41b883"
             :-years-spent="2"
@@ -53,7 +53,7 @@ const SkillCard = defineAsyncComponent(
               </template>
             </SkillCard>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="TypeScript" :-bar-value="50" :-skill-level="$t('Intermediate')"
             -bar-color="#3178c6"
             :-years-spent="0"
@@ -66,7 +66,7 @@ const SkillCard = defineAsyncComponent(
         </div>
         <h2>Backend:</h2>
         <div class="row g-4">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="C#" :-bar-value="75" :-skill-level="$t('Intermediate')+'/'+$t('Advanced')"
             -bar-color="#823085"
             :-years-spent="3"
@@ -76,7 +76,7 @@ const SkillCard = defineAsyncComponent(
               </template>
             </SkillCard>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="Python" :-bar-value="25" :-skill-level="$t('Beginner')"
             -bar-color="#ffde57"
             :-years-spent="1"
