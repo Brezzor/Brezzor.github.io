@@ -6,18 +6,14 @@ defineProps({
   SkillLevel: {type: String, required: true},
   YearsSpent: {type: Number, required: false},
   MonthsSpent: {type: Number, required: false},
-  TextColor: {type: String, required: false},
-  ImgUrl: {type: String, required: true}
+  TextColor: {type: String, required: false}
 })
-const getImageUrl = (url: string) => {
-  return new URL(url, import.meta.url).href
-}
 </script>
 
 <template>
   <div class="card">
     <div class="card-header">
-      <img :src="getImageUrl(ImgUrl)" alt="logo" height="20" width="20" class="skill-icon me-2">
+      <slot name="SkillIcon"></slot>
       <span>{{ SkillName }}</span>
     </div>
     <div class="card-body">
