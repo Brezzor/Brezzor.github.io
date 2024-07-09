@@ -29,7 +29,7 @@ defineProps({
         <span class="ms-2" v-else-if="MonthsSpent && MonthsSpent <= 1">{{ MonthsSpent }} {{ $t('Month') }}</span>
       </span>
       <div class="progress border border-dark-subtle rounded mt-2" role="progressbar" aria-label="Example with label" :aria-valuenow="BarValue" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped rounded fw-bold fs-6" :style="{ width: BarValue + '%', backgroundColor: BarColor, color: TextColor }" >{{ SkillLevel }}</div>
+  <div class="progress-bar progress-bar-striped rounded fw-bold" :style="{ width: BarValue + '%', backgroundColor: BarColor, color: TextColor }" >{{ SkillLevel }}</div>
 </div>
     </div>
   </div>
