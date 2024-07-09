@@ -9,12 +9,15 @@ defineProps({
   TextColor: {type: String, required: false},
   ImgUrl: {type: String, required: true}
 })
+const getImageUrl = (url: string) => {
+  return new URL(url, import.meta.url).href
+}
 </script>
 
 <template>
   <div class="card">
     <div class="card-header">
-      <img :src="ImgUrl" alt="logo" height="20" width="20" class="skill-icon me-2">
+      <img :src="getImageUrl(ImgUrl)" alt="logo" height="20" width="20" class="skill-icon me-2">
       <span>{{ SkillName }}</span>
     </div>
     <div class="card-body">
