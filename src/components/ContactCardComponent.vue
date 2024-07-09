@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="card">
+  <div class="card shadow">
     <div class="card-header">
       <div class="row g-0">
         <div class="col-5">

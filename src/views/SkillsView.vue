@@ -44,12 +44,32 @@ const SkillCard = defineAsyncComponent(
             </SkillCard>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="Bootstrap" :-bar-value="75" :-skill-level="$t('Intermediate')+'/'+$t('Advanced')"
+            -bar-color="#6f2cf4"
+            :-years-spent="3"
+            :-months-spent="6">
+              <template #SkillIcon>
+                <img src="../assets/bootstrap-logo.svg" alt="Bootstrap logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="JQuery" :-bar-value="50" :-skill-level="$t('Intermediate')"
+            -bar-color="#1266a9"
+            :-years-spent="0"
+            :-months-spent="6">
+              <template #SkillIcon>
+                <img src="../assets/jquery-logo.svg" alt="Vue logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="Vue.js" :-bar-value="50" :-skill-level="$t('Intermediate')"
             -bar-color="#41b883"
             :-years-spent="2"
             :-months-spent="5">
               <template #SkillIcon>
-                <img src="../assets/vue-logo.svg" alt="vue logo" height="20" width="20" class="skill-icon">
+                <img src="../assets/vue-logo.svg" alt="Vue logo" height="20" width="20" class="skill-icon">
               </template>
             </SkillCard>
           </div>
@@ -60,6 +80,16 @@ const SkillCard = defineAsyncComponent(
             :-months-spent="4">
               <template #SkillIcon>
                 <img src="../assets/typescript-logo.svg" alt="TypeScript logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="Sass" :-bar-value="25" :-skill-level="$t('Beginner')"
+            -bar-color="#ce6799"
+            :-years-spent="0"
+            :-months-spent="1">
+              <template #SkillIcon>
+                <img src="../assets/sass-logo.svg" alt="TypeScript logo" height="20" width="20" class="skill-icon">
               </template>
             </SkillCard>
           </div>
@@ -77,13 +107,83 @@ const SkillCard = defineAsyncComponent(
             </SkillCard>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <SkillCard -skill-name="Python" :-bar-value="25" :-skill-level="$t('Beginner')"
+            <SkillCard -skill-name="SQL" :-bar-value="75" :-skill-level="$t('Intermediate')+'/'+$t('Advanced')"
+            -bar-color="#007FFF"
+            :-years-spent="2"
+            :-months-spent="5">
+              <template #SkillIcon>
+                <img src="../assets/sql-logo.svg" alt="SQL logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="MSSQL" :-bar-value="50" :-skill-level="$t('Intermediate')"
+            -bar-color="#b71c1c"
+            :-years-spent="2"
+            :-months-spent="5">
+              <template #SkillIcon>
+                <img src="../assets/mssql-logo.svg" alt="MSSQL logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="T-SQL" :-bar-value="50" :-skill-level="$t('Intermediate')"
+            -bar-color="#007FFF"
+            :-years-spent="2"
+            :-months-spent="5">
+              <template #SkillIcon>
+                <img src="../assets/mssql-logo.svg" alt="T-SQL logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name=".NET" :-bar-value="50" :-skill-level="$t('Intermediate')"
+            -bar-color="#5129d3"
+            :-years-spent="2"
+            :-months-spent="0">
+              <template #SkillIcon>
+                <img src="../assets/dotnet-logo.png" alt=".NET logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="Kotlin" :-bar-value="50" :-skill-level="$t('Intermediate')"
+            -bar-color="#B125EA"
+            :-years-spent="0"
+            :-months-spent="6">
+              <template #SkillIcon>
+                <img src="../assets/kotlin-logo.svg" alt="Kotlin logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="Python" :-bar-value="50" :-skill-level="$t('Intermediate')"
             -bar-color="#ffde57"
             :-years-spent="1"
             :-months-spent="5"
             -text-color="#000000">
               <template #SkillIcon>
-                <img src="../assets/python-logo.svg" alt="C# logo" height="20" width="20" class="skill-icon">
+                <img src="../assets/python-logo.svg" alt="Python logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="Node.js" :-bar-value="25" :-skill-level="$t('Beginner')"
+            -bar-color="#68a063"
+            :-years-spent="1"
+            :-months-spent="5">
+              <template #SkillIcon>
+                <img src="../assets/nodejs-logo.svg" alt="Node.js logo" height="20" width="20" class="skill-icon">
+              </template>
+            </SkillCard>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <SkillCard -skill-name="PHP" :-bar-value="25" :-skill-level="$t('Beginner')"
+            -bar-color="#777BB3"
+            :-years-spent="0"
+            :-months-spent="6">
+              <template #SkillIcon>
+                <img src="../assets/php-logo.svg" alt="PHP logo" height="20" width="20" class="skill-icon">
               </template>
             </SkillCard>
           </div>
@@ -96,7 +196,7 @@ const SkillCard = defineAsyncComponent(
 <style scoped>
 .skill-icon {
   height: 1.5rem;
-  width: 1.5rem;
+  width: auto;
   margin-right: .5rem;
 }
 </style>

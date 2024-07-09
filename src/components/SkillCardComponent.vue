@@ -11,10 +11,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="card">
+  <div class="card shadow">
     <div class="card-header">
-      <slot name="SkillIcon"></slot>
-      <span>{{ SkillName }}</span>
+      <div class="d-flex align-items-center">
+        <slot name="SkillIcon"></slot>
+        <span>{{ SkillName }}</span>
+      </div>
     </div>
     <div class="card-body">
       <span>
@@ -26,8 +28,8 @@ defineProps({
         <span class="ms-2" v-if="MonthsSpent && MonthsSpent > 1">{{ MonthsSpent }} {{ $t('Months') }}</span>
         <span class="ms-2" v-else-if="MonthsSpent && MonthsSpent <= 1">{{ MonthsSpent }} {{ $t('Month') }}</span>
       </span>
-      <div class="progress" role="progressbar" aria-label="Example with label" :aria-valuenow="BarValue" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped fw-bold" :style="{ width: BarValue + '%', backgroundColor: BarColor, color: TextColor }" >{{ SkillLevel }}</div>
+      <div class="progress border border-dark-subtle rounded mt-2" role="progressbar" aria-label="Example with label" :aria-valuenow="BarValue" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped rounded fw-bold fs-6" :style="{ width: BarValue + '%', backgroundColor: BarColor, color: TextColor }" >{{ SkillLevel }}</div>
 </div>
     </div>
   </div>
