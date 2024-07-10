@@ -5,8 +5,7 @@
     <div class="card shadow">
       <div class="card-body">
         <h1 class="text-center">{{ $t('AboutPage.Title') }}</h1>
-        <div class="container pt-2">
-          <div class="row gap-4">
+          <div class="row gap-4 mt-4">
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
@@ -63,6 +62,22 @@
                             <div
                               class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start"
                             >
+                              <span>{{ $t('AboutPage.Education.WebDev') }}</span>
+                            </div>
+                            <div
+                              class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end"
+                            >
+                              <span class="badge text-bg-primary rounded-pill"
+                                >{{ $t('Now') }} - 2026</span
+                              >
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="row g-2 g-sm-0">
+                            <div
+                              class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start"
+                            >
                               <span>{{ $t('AboutPage.Education.ComputerScience') }}</span>
                             </div>
                             <div
@@ -110,7 +125,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

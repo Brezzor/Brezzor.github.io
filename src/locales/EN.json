@@ -27,6 +27,7 @@
   "Beginner": "Beginner",
   "Intermediate": "Intermediate",
   "Advanced": "Advanced",
+  "Now": "Now",
   "HomePage": {
     "TitleParts": {
       "First": "Welcome",
@@ -57,7 +58,8 @@
     "Education": {
       "Title": "Education",
       "ComputerScience": "Computer science",
-      "Electrician": "EUX electrician"
+      "Electrician": "EUX electrician",
+      "WebDev": "Web-development"
     },
     "MyGoals": {
       "Title": "My goals",
@@ -93,6 +95,16 @@
     "RegisterMessage": {
       "First": "Don't have an account",
       "Second": "Register here"
+    }
+  },
+  "WorksPage": {
+    "Title": "Works",
+    "Companies": {
+      "ChannelCrm": {
+        "Name": "ChannelCrm",
+        "Text-1": "During my internship as a computer scientist, I was an intern at ChannelCrm. ChannelCrm is a company located in Køge and specializes in delivering CRM systems.",
+        "Text-2": "During the stay, I helped renew the old system to a new .NET Blazor system. In addition to creating the frontend and backend in .NET Blazor, I have also worked on converting the old Microsoft Silverlight database to fit the new system's SQL Express database."
+      }
     }
   }
 }

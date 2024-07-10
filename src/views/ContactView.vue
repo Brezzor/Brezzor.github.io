@@ -9,7 +9,7 @@ const ContactCard = defineAsyncComponent(() => import('../components/ContactCard
       <div class="card-body">
         <div class="container text-center">
           <h1>{{ $t('Contact') }}</h1>
-          <div class="row g-4 mt-2">
+          <div class="row g-4 mt-4">
             <div class="col-md-12 col-lg-5">
               <div class="d-flex justify-content-center align-items-center h-100 py-4 py-lg-0">
                 <img

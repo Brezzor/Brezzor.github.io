@@ -10,8 +10,8 @@ const SkillCard = defineAsyncComponent(
     <div class="card shadow">
       <div class="card-body">
         <h1 class="text-center">{{ $t('Skills') }}</h1>
-        <h2>Frontend:</h2>
-        <div class="row g-4 mb-2">
+        <h2 class="mt-4">Frontend:</h2>
+        <div class="row g-4 mb-4">
           <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="Html" :-bar-value="100" :-skill-level="$t('Advanced')"
             -bar-color="#f06529"
@@ -128,7 +128,7 @@ const SkillCard = defineAsyncComponent(
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <SkillCard -skill-name="T-SQL" :-bar-value="50" :-skill-level="$t('Intermediate')"
-            -bar-color="#007FFF"
+            -bar-color="#b71c1c"
             :-years-spent="2"
             :-months-spent="5">
               <template #SkillIcon>
