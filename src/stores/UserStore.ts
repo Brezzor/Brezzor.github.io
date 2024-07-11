@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getAuth, type User, onAuthStateChanged, updateProfile } from 'firebase/auth'
+import { getAuth, type User, onAuthStateChanged, updateProfile, sendEmailVerification } from 'firebase/auth'
 
 export const useUserStore = defineStore('userStore', () => {
   const user = ref<null | User>(null)
@@ -10,6 +10,18 @@ export const useUserStore = defineStore('userStore', () => {
   const updateDisplayname = async (displayName: string) => {
     if (user.value !== null) {
       await updateProfile(user?.value, { displayName: displayName }).catch((error) => {
+        console.log(error.message)
+      })
+    }
+  }
+
+  const sendEmailVerify = async () => {
+    if (user.value !== null) {
+      await sendEmailVerification(user?.value)
+      .then(()=>{
+        alert('Verification Email send!')
+      })
+      .catch((error) => {
         console.log(error.message)
       })
     }
@@ -35,6 +47,7 @@ export const useUserStore = defineStore('userStore', () => {
   return {
     user,
     updateDisplayname,
+    sendEmailVerify,
     getCurrentUser
   }
 })

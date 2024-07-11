@@ -29,26 +29,14 @@ const showPasswordIcon = computed(() => {
               </div>
               <div class="mb-3">
                 <label for="loginEmail" class="form-label">{{ $t('LoginPage.Email') }}</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="loginEmail"
-                  placeholder="Email"
-                  class="form-control"
-                  v-model="email"
-                />
+                <input type="email" name="email" id="loginEmail" placeholder="Email" class="form-control"
+                  v-model="email" />
               </div>
               <div class="mb-3">
                 <label for="loginPassword" class="form-label">{{ $t('LoginPage.Password') }}</label>
                 <div class="input-group">
-                  <input
-                    :type="inputType"
-                    name="password"
-                    id="loginPassword"
-                    :placeholder="$t('LoginPage.Password')"
-                    class="form-control"
-                    v-model="password"
-                  />
+                  <input :type="inputType" name="password" id="loginPassword" :placeholder="$t('LoginPage.Password')"
+                    class="form-control" v-model="password" />
                   <div class="input-group-text p-0">
                     <button class="btn py-0" v-on:click="toggleShow">
                       <i class="bi" aria-hidden="true" :class="showPasswordIcon"></i>
@@ -58,13 +46,8 @@ const showPasswordIcon = computed(() => {
               </div>
               <div class="mb-3">
                 <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    name="loginRemember"
-                    id="loginRemember"
-                    v-model="authStore.rememberMe"
-                  />
+                  <input class="form-check-input" type="checkbox" name="loginRemember" id="loginRemember"
+                    v-model="authStore.rememberMe" />
                   <label class="form-check-label" for="loginRemember">
                     {{ $t('LoginPage.Remember') }}
                   </label>
@@ -77,8 +60,7 @@ const showPasswordIcon = computed(() => {
               </div>
               <div>
                 <span>{{ $t('LoginPage.RegisterMessage.First') }}? </span>
-                <RouterLink :to="{ name: 'Register' }"
-                  >{{ $t('LoginPage.RegisterMessage.Second') }}
+                <RouterLink :to="{ name: 'Register' }">{{ $t('LoginPage.RegisterMessage.Second') }}
                 </RouterLink>
               </div>
             </form>

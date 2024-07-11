@@ -10,7 +10,8 @@ import {
   signOut,
   createUserWithEmailAndPassword,
   type Persistence,
-  onAuthStateChanged
+  onAuthStateChanged,
+  sendEmailVerification
 } from 'firebase/auth'
 
 export const useAuthStore = defineStore('authStore', () => {
@@ -74,9 +75,10 @@ export const useAuthStore = defineStore('authStore', () => {
     setPersistence(auth, persistenceType)
       .then(() => {
         return createUserWithEmailAndPassword(auth, email, password)
-          .then(() => {
+          .then((data) => {
             isLoggedIn.value = true
             errMsg.value = null
+            sendEmailVerification(data.user)
             router.push({ name: 'Feed' })
           })
           .catch((error) => {

@@ -103,7 +103,7 @@
       "ChannelCrm": {
         "Name": "ChannelCrm",
         "Text-1": "Under mit praktikophold som datamatiker, var jeg i praktik hos ChannelCrm. ChannelCrm er et firma som befinder sig i Køge og gør sig i at levere CRM systemer.",
-        "Text-2": "Under opholdet har jeg hjulpet med at fornye det gamle system, til et nye .NET Blazor system. Udover at lave frontend og backend i .NET Blazor, har jeg også arbjedet med at konvertere den gamle Microsoft Silverlight database, til at passe med det nye systems SQL Express database."
+        "Text-2": "Under opholdet har jeg hjulpet med at fornye det gamle system, til et nyt .NET Blazor system. Udover at lave frontend og backend i .NET Blazor, har jeg også arbjedet med at konvertere den gamle Microsoft Silverlight database, til at passe med det nye systems SQL Express database."
       }
     }
   }
