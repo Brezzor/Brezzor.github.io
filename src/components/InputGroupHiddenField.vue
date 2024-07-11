@@ -2,11 +2,11 @@
 import { computed, ref } from "vue";
 
 defineProps<{
-    labelId: string;
+    inputId: string;
     value: string | undefined;
-    label: string;
-    ariaLabel: string;
-    ariaDescribedBy: string;
+    labelText: string;
+    ariaLabel?: string;
+    ariaDescribedBy?: string;
 }>()
 
 const showPassword = ref<boolean>(false)
@@ -24,14 +24,16 @@ const showPasswordIcon = computed(() => {
 </script>
 
 <template>
-    <div class="input-group mb-3">
-        <span class="input-group-text" :id="labelId">{{ label }}</span>
-        <input :type="inputType" class="form-control" aria-label="UserId" aria-describedby="display-userId" readonly
-            :value="value">
-        <div class="input-group-text">
-            <button class="btn py-0" v-on:click="toggleShow">
-                <i class="bi" aria-hidden="true" :class="showPasswordIcon"></i>
-            </button>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">{{ labelText }}</label>
+        <div class="input-group">
+            <input :type="inputType" class="form-control" :aria-label="ariaLabel" :aria-describedby="ariaDescribedBy"
+                readonly :value="value">
+            <div class="input-group-text">
+                <button class="btn p-0" v-on:click="toggleShow">
+                    <i class="bi" aria-hidden="true" :class="showPasswordIcon"></i>
+                </button>
+            </div>
         </div>
     </div>
 </template>

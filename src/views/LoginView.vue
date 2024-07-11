@@ -37,8 +37,8 @@ const showPasswordIcon = computed(() => {
                 <div class="input-group">
                   <input :type="inputType" name="password" id="loginPassword" :placeholder="$t('LoginPage.Password')"
                     class="form-control" v-model="password" />
-                  <div class="input-group-text p-0">
-                    <button class="btn py-0" v-on:click="toggleShow">
+                  <div class="input-group-text">
+                    <button class="btn p-0" v-on:click="toggleShow">
                       <i class="bi" aria-hidden="true" :class="showPasswordIcon"></i>
                     </button>
                   </div>
