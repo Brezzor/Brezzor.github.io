@@ -13,6 +13,7 @@ import en from './locales/EN.json'
 import da from './locales/DA.json'
 
 import { initializeApp } from 'firebase/app'
+import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check'
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -23,7 +24,16 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_APP_ID
 }
 
-initializeApp(firebaseConfig)
+const firebaseApp = initializeApp(firebaseConfig)
+
+if (location.hostname === "localhost") {
+  self.FIREBASE_APPCHECK_DEBUG_TOKEN = true
+}
+
+initializeAppCheck(firebaseApp, {
+  provider: new ReCaptchaV3Provider(import.meta.env.VITE_SITE_KEY),
+  isTokenAutoRefreshEnabled: true
+})
 
 const lang = () => {
   if (navigator.language === 'da') {

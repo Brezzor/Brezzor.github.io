@@ -15,7 +15,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "firebase": "^10.12.2",
+    "firebase": "^10.14.1",
     "pinia": "^2.1.7",
     "sass": "^1.77.4",
     "vue": "^3.4.21",
