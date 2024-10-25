@@ -8,7 +8,6 @@ interface ImportMetaEnv {
   readonly VITE_MESSAGING_SENDER_ID: string
   readonly VITE_APP_ID: string
   readonly VITE_SITE_KEY: string
-  readonly VITE_DEBUG_TOKEN: string
 }
 
 interface ImportMeta {
