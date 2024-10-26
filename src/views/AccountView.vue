@@ -2,10 +2,8 @@
 import { useUserStore } from '@/stores/UserStore'
 import { defineAsyncComponent } from 'vue';
 const userStore = useUserStore()
-const hiddenField = defineAsyncComponent(() => import('../components/InputGroupHiddenField.vue'))
-const popup = () => {
-  alert('Nothing yet... coming soon!')
-}
+const hiddenField = defineAsyncComponent(() => import('@/components/InputGroupHiddenField.vue'))
+const EditProfileModal = defineAsyncComponent(() => import('@/components/EditProfileModal.vue'))
 </script>
 
 <template>
@@ -15,9 +13,17 @@ const popup = () => {
         <h1 class="text-center">{{ $t('AccountPage.Title') }}</h1>
         <div class="row justify-content-center">
           <div class="col-12 col-md-6 col-lg-4">
-            <hiddenField input-id="userId" :value="userStore.user?.uid" label-text="Uid"></hiddenField>
-            <hiddenField input-id="providerId" :value="userStore.user?.providerId" label-text="provider id">
-            </hiddenField>
+            <div class="mb-3">
+              <label for="ProfilePhoto" class="form-label">Profile picture</label>
+              <div class="d-flex justify-content-center">
+                <i v-if="!userStore.user?.photoURL"
+                  class="profile-placeholder bi bi-person border border-3 rounded-circle"></i>
+                <img v-else type="file" class="profile-picture border border-3 rounded-circle"
+                  :src="userStore.user?.photoURL!" aria-label="ProfilePhoto">
+              </div>
+            </div>
+            <hiddenField input-id="userId" :value="userStore.user?.uid" label-text="Uid" />
+            <hiddenField input-id="providerId" :value="userStore.user?.providerId" label-text="provider id" />
             <div class="mb-3">
               <label for="Displayname" class="form-label">Displayname</label>
               <input type="text" class="form-control" aria-label="Displayname" aria-describedby="display-Displayname"
@@ -38,7 +44,7 @@ const popup = () => {
               <input type="text" class="form-control" aria-label="EmailVerified"
                 aria-describedby="display-Email-Verified" readonly :value="userStore.user?.emailVerified">
             </div>
-            <button class="btn btn-success me-2" type="button" v-on:click="popup()">Edit</button>
+            <EditProfileModal class="me-2" />
             <button class="btn btn-success" type="button" v-on:click="userStore.sendEmailVerify()"
               v-if="!userStore.user?.emailVerified">Verify Email</button>
           </div>
@@ -47,3 +53,17 @@ const popup = () => {
     </div>
   </div>
 </template>
+
+<style>
+.profile-picture {
+  height: 10rem;
+  width: auto;
+}
+
+.profile-placeholder {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10rem;
+  line-height: 0;
+}
+</style>

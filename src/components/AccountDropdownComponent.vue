@@ -16,39 +16,19 @@ const signOut = () => {
   <div class="card">
     <div class="card-body py-2">
       <div class="dropdown-custom">
-        <button
-          class="nav-link dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <i class="bi bi-person-circle"></i>
-          <img
-            class="rounded-circle"
-            :src="userStore.user?.photoURL"
-            alt="profile picture"
-            height="30"
-            width="30"
-            v-if="userStore.user?.photoURL"
-          />
-          <span class="ms-2" v-else>{{ $t('Profile') }}</span>
+        <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img class="profile-photo border border-2 rounded-circle" :src="userStore.user?.photoURL!"
+            alt="profile picture" v-if="userStore.user?.photoURL" />
+          <i class="profile-placeholder bi bi-person-circle" v-else></i>
+          <span class="ms-2 h-100">{{ $t('Profile') }}</span>
         </button>
         <ul class="dropdown-menu position-absolute">
           <li>
-            <RouterLink
-              class="dropdown-item"
-              :to="{ name: 'Account' }"
-              v-on:click="navStore.closeNavbar"
-            >
-              {{ $t('Account') }}</RouterLink
-            >
+            <RouterLink class="dropdown-item" :to="{ name: 'Account' }" v-on:click="navStore.closeNavbar">
+              {{ $t('Account') }}</RouterLink>
           </li>
           <li>
-            <RouterLink
-              class="dropdown-item"
-              :to="{ name: 'Feed' }"
-              v-on:click="navStore.closeNavbar"
-            >
+            <RouterLink class="dropdown-item" :to="{ name: 'Feed' }" v-on:click="navStore.closeNavbar">
               {{ $t('Feed') }}
             </RouterLink>
           </li>
@@ -85,5 +65,17 @@ const signOut = () => {
     left: -53%;
     margin-top: var(--bs-dropdown-spacer);
   }
+}
+
+.profile-photo {
+  height: 2.5rem;
+  width: auto;
+}
+
+.profile-placeholder {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2.5em;
+  line-height: 0;
 }
 </style>

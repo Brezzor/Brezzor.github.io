@@ -28,6 +28,9 @@
   "Intermediate": "Intermediate",
   "Advanced": "Advanced",
   "Now": "Now",
+  "Edit": "Edit",
+  "Close": "Close",
+  "DeleteImage": "Delete Photo",
   "HomePage": {
     "TitleParts": {
       "First": "Welcome",
