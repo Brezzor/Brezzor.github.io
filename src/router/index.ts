@@ -1,9 +1,9 @@
 import { useUserStore } from '@/stores/UserStore'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
   linkActiveClass: 'active',
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
