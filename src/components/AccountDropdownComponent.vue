@@ -17,8 +17,8 @@ const signOut = () => {
     <div class="card-body py-2">
       <div class="dropdown-custom">
         <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img class="profile-photo border border-2 rounded-circle" :src="userStore.user?.photoURL!"
-            alt="profile picture" v-if="userStore.user?.photoURL" />
+          <img class="profile-picture border border-2 rounded-circle" :src="userStore.user?.photoURL!"
+            aria-label="Profile picture" v-if="userStore.user?.photoURL" />
           <i class="profile-placeholder bi bi-person-circle" v-else></i>
           <span class="ms-2 h-100">{{ $t('Profile') }}</span>
         </button>
@@ -67,7 +67,7 @@ const signOut = () => {
   }
 }
 
-.profile-photo {
+.profile-picture {
   height: 2.5rem;
   width: auto;
 }

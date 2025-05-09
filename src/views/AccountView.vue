@@ -18,8 +18,8 @@ const EditProfileModal = defineAsyncComponent(() => import('@/components/EditPro
               <div class="d-flex justify-content-center">
                 <i v-if="!userStore.user?.photoURL"
                   class="profile-placeholder bi bi-person border border-3 rounded-circle"></i>
-                <img v-else type="file" class="profile-picture border border-3 rounded-circle"
-                  :src="userStore.user?.photoURL!" aria-label="ProfilePhoto">
+                <img v-else class="profile-picture border border-3 rounded-circle" :src="userStore.user?.photoURL!"
+                  aria-label="Profile picture">
               </div>
             </div>
             <hiddenField input-id="userId" :value="userStore.user?.uid" label-text="Uid" />

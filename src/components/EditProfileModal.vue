@@ -6,13 +6,7 @@ const userStore = useUserStore()
 const uuid = uuidv4()
 const newDisplayName = ref<string | null | undefined>(userStore.user?.displayName)
 const newEmail = ref<string | null | undefined>(userStore.user?.email)
-const file = ref<File | null>()
-const onChange = (event: Event) => {
-    const target = event.target as HTMLInputElement
-
-    const selectedFile = target.files ? target.files[0] : null
-    file.value = selectedFile
-}
+const newPhotoUrl = ref<string | null | undefined>(userStore.user?.photoURL)
 </script>
 
 <template>
@@ -29,9 +23,9 @@ const onChange = (event: Event) => {
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="ProfilePhoto" class="form-label">ProfilePhoto</label>
-                        <input type="file" class="form-control" aria-label="ProfilePhoto"
-                            aria-describedby="display-ProfilePhoto" v-on:change="onChange">
+                        <label for="PhotoUrl" class="form-label">PhotoUrl</label>
+                        <input type="text" class="form-control" aria-label="PhotoUrl"
+                            aria-describedby="display-PhotoUrl" v-model="newPhotoUrl">
                     </div>
                     <div class="mb-3">
                         <label for="Displayname" class="form-label">Displayname</label>
@@ -46,11 +40,8 @@ const onChange = (event: Event) => {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ $t('Close') }}</button>
-                    <button v-if="userStore.user?.photoURL" type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal" v-on:click="userStore.removeProfilePhoto">{{
-                            $t('DeleteImage') }}</button>
                     <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"
-                        v-on:click="userStore.updateUserInfo(newDisplayName, file, newEmail)">{{ $t('Save')
+                        v-on:click="userStore.updateUserInfo(newDisplayName, newPhotoUrl, newEmail)">{{ $t('Save')
                         }}</button>
                 </div>
             </div>

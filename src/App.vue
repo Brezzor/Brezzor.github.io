@@ -1,6 +1,31 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
 import { RouterView } from 'vue-router'
+
+// Declare PayPal as a global variable
+declare global {
+  interface Window {
+    PayPal: {
+      Donation: {
+        Button: (options: {
+          env: string
+          hosted_button_id: string
+          image: {
+            src: string
+            alt: string
+            title: string
+          }
+        }) => {
+          render: (elementId: string) => void
+        }
+      }
+    }
+  }
+}
+
+// Ensure the PayPal SDK script is loaded globally
+window.PayPal = window.PayPal || undefined;
+
 const HeaderComponent = defineAsyncComponent(() => import('./components/HeaderComponent.vue'))
 const fab = defineAsyncComponent(() => import('@/components/FloatingActionButton.vue'))
 </script>
@@ -17,14 +42,13 @@ const fab = defineAsyncComponent(() => import('@/components/FloatingActionButton
 
 <style scoped>
 .container {
-  margin-top: 6rem;
-  margin-bottom: 7rem;
+  margin-top: 7rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 992px) {
   .container {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 6rem;
   }
 }
 
