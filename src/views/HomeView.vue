@@ -32,9 +32,8 @@ const userStore = useUserStore()
                 ]" />
               </div>
               <div class="col-12">
-                <div class="d-flex flex-column justify-content-center align-items-center gap-4">
+                <div class="d-flex flex-column justify-content-center align-items-center">
                   <RouterLink class="btn btn-primary" to="/contact">{{ $t('Contact') }}</RouterLink>
-                  <Donation />
                 </div>
               </div>
             </div>

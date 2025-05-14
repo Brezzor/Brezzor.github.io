@@ -27,7 +27,9 @@ declare global {
 window.PayPal = window.PayPal || undefined;
 
 const HeaderComponent = defineAsyncComponent(() => import('./components/HeaderComponent.vue'))
-const fab = defineAsyncComponent(() => import('@/components/FloatingActionButton.vue'))
+const FabContainer = defineAsyncComponent(() => import('@/components/FloatingContainer.vue'))
+const FabButton = defineAsyncComponent(() => import('@/components/FloatingActionButton.vue'))
+const Donation = defineAsyncComponent(() => import('@/components/FloatingDonation.vue'))
 </script>
 
 <template>
@@ -37,7 +39,10 @@ const fab = defineAsyncComponent(() => import('@/components/FloatingActionButton
       <component :is="Component" :key="route.path" />
     </transition>
   </RouterView>
-  <fab />
+  <FabContainer>
+    <FabButton></FabButton>
+    <Donation></Donation>
+  </FabContainer>
 </template>
 
 <style scoped>

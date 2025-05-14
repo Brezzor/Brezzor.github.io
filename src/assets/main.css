@@ -105,6 +105,11 @@ body,
   color: var(--primary-color);
 }
 
+.fit-content {
+  height: fit-content !important;
+  width: fit-content !important;
+}
+
 .my-image {
   height: 100%;
   max-width: 265px;

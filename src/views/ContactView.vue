@@ -12,11 +12,7 @@ const Donation = defineAsyncComponent(() => import('../components/PaypalCoffeeDo
           <h1>{{ $t('Contact') }}</h1>
           <div class="row g-4 mt-4">
             <div class="col-md-12 col-lg-5">
-              <div class="d-flex flex-column gap-5 justify-content-center align-items-center h-100 py-4 py-lg-0">
-                <img class="my-image floating" src="../assets/my-image.webp" alt="headshot" height="100%"
-                  width="100%" />
-                <Donation />
-              </div>
+              <img class="my-image floating" src="../assets/my-image.webp" alt="headshot" height="100%" width="100%" />
             </div>
             <div class="col-md-12 col-lg-7">
               <div class="d-flex justify-content-center align-items-center h-100">
