@@ -4,7 +4,6 @@
 <template>
     <div class="d-flex gap-2">
         <span class="text-nowrap fw-bold">{{ $t("Coffee") }}</span>
-        <Span class="fs-3 lh-1">&#129050;</Span>
         <form v-if="$i18n.locale === 'da'" action="https://www.paypal.com/donate" method="post" target="_top">
             <input type="hidden" name="hosted_button_id" value="EWBC67WQU8XHA" />
             <input type="image"

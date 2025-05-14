@@ -3,11 +3,13 @@ import { useAuthStore } from '@/stores/AuthStore'
 import { useNavStore } from '@/stores/NavStore'
 import { defineAsyncComponent } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useWindowSize } from '@vueuse/core'
 const authStore = useAuthStore()
 const navStore = useNavStore()
 const accountDropdown = defineAsyncComponent(
   () => import('../components/AccountDropdownComponent.vue')
 )
+const { width } = useWindowSize()
 </script>
 
 <template>
@@ -15,7 +17,7 @@ const accountDropdown = defineAsyncComponent(
     <nav class="container-fluid">
       <RouterLink class="navbar-brand" :to="{ name: 'Home' }" v-on:click="navStore.closeNavbar">
         <img class="me-2 logo" src="@/assets/logo.webp" alt="Logo" width="35" height="35" />
-        <span class="align-middle">Oliver - Portfolio</span>
+        <span v-if="width >= 576" class="align-middle">Oliver - Portfolio</span>
       </RouterLink>
       <button class="navbar-toggler" type="button" :aria-expanded="navStore.show && 'true'"
         aria-label="Toggle navigation" v-on:click="navStore.toggleNavbar">
